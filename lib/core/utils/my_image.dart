@@ -1,0 +1,39 @@
+class MyImage{
+  static String myImage1="assets/images/1.JPG";
+  static String backGroundHalfPlus="assets/images/backgroundplus.svg";
+  static String backGroundFullPlus="assets/images/plusicon.svg";
+   static String sanDowAi="assets/images/sandow ai.svg";
+   static String backImageSplashScreenOne="assets/images/man flexes his muscles dark room.png";
+  static String dotVector="assets/icons/dotvector.svg";
+  static String welcomeImageOne="assets/images/welcomescreenimageone.png";
+  static String welcomeImageTwo="assets/images/welcomescreentwo.png";
+  static String welcomeImageThree="assets/images/welcomescreenimagethree.png";
+  static String welcomeImageFour="assets/images/welcomescreenimagefour.png";
+  static String welcomeImageFive="assets/images/welcomescreenimagefive.png";
+   static String arrowLeft="assets/icons/arrowleft.svg";
+   static String arrowRight="assets/icons/arrowright.svg";
+   static String robotImage="assets/images/robotimage.JPG";
+   static String rightArrowIcon="assets/icons/rightarrowicon.svg";
+   static String assesMent="assets/images/assetment1.jpg";
+   static String emailIcon="assets/icons/emailicon.svg";
+   static String lockIcon="assets/icons/lockicon.svg";
+   static String visibilityIcon="assets/icons/visibilityicon.svg";
+   static String facebookIcon="assets/icons/facebookicon.svg";
+   static String instraIcon="assets/icons/instragramicon.svg";
+   static String linkDinIcon="assets/icons/linkindinicon.svg";
+   static String warningIcon="assets/icons/warningicon.svg";
+   static String backIcon="assets/icons/backicon.svg";
+   static String lockImageHalf="assets/images/lockImagehalf.JPG";
+   static String lockImageFull="assets/images/lockImage.png";
+   static String rightMark="assets/icons/rightmarkIcon.svg";
+   static String closeIcon="assets/icons/closeicon.svg";
+   static String one="assets/icons/one.svg";
+   static String two="assets/icons/two.svg";
+   static String three="assets/icons/three.svg";
+   static String four="assets/icons/four.svg";
+   static String five="assets/icons/five.svg";
+   static String circleIcon="assets/icons/circleIcon.svg";
+   static String gymMan="assets/images/gymman.png";
+   static String gymLady="assets/images/gymlady.png";
+
+}

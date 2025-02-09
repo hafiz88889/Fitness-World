@@ -1,27 +1,24 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
-import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ScreenOne extends StatefulWidget {
-  const ScreenOne({super.key});
+class ScreenEight extends StatefulWidget {
+  const ScreenEight({super.key});
 
   @override
-  State<ScreenOne> createState() => _ScreenOneState();
+  State<ScreenEight> createState() => _ScreenEightState();
 }
 
-class _ScreenOneState extends State<ScreenOne> {
-  int selectedIndex = 1;
-
-  final List<Map<String, dynamic>> options = [
-    {"icon": MyImage.one, "text": "I wanna lose weight"},
-    {"icon": MyImage.two, "text": "I wanna try AI Coach"},
-    {"icon": MyImage.three, "text": "I wanna get bulks"},
-    {"icon": MyImage.four, "text": "I wanna gain endurance"},
-    {"icon": MyImage.five, "text": "Just trying out the app! 👍"},
+class _ScreenEightState extends State<ScreenEight> {
+  final List<Map<String, dynamic>> item = [
+    {"image": MyImage.leafIcon, "text": "This no moe","text2": "TVegan"},
+    {"image": MyImage.dietICon, "text": "Carbo Diet","text2": "Bread, etc"},
+    {"image": MyImage.resturentIcon, "text": "Specialized","text2": "Paleo, keto, etc"},
+    {"image": MyImage.tradionalIcon, "text": "Traditional","text2": "Fruit diet"},
   ];
+  int selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +61,7 @@ class _ScreenOneState extends State<ScreenOne> {
                       borderRadius: BorderRadius.circular(15),
                       color: MyColor.splashBacColorTwo.withAlpha(30)),
                   child: Text(
-                    "1 of 17",
+                    "8 of 17",
                     style: regularTextStyle24.copyWith(
                         color: MyColor.splashBacColorTwo, fontSize: 14),
                   ),
@@ -75,16 +72,22 @@ class _ScreenOneState extends State<ScreenOne> {
               height: 50,
             ),
             Text(
-              "What’s your fitness goal/target?",
+              "Do you have a specific diet preference?",
               textAlign: TextAlign.center,
               style: regularTextStyle24.copyWith(fontSize: 30),
             ),
             const SizedBox(
-              height: 50,
+              height: 10,
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: options.length,
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 5,
+                  childAspectRatio: 1,
+                ),
+                itemCount: item.length,
                 itemBuilder: (context, index) {
                   bool isSelected = index == selectedIndex;
                   return GestureDetector(
@@ -94,51 +97,46 @@ class _ScreenOneState extends State<ScreenOne> {
                       });
                     },
                     child: Container(
-                      margin: const EdgeInsets.symmetric(vertical: 8),
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 16, horizontal: 16),
+                      padding: const EdgeInsets.all(20),
+                      margin: const EdgeInsets.symmetric(vertical: 10),
                       decoration: BoxDecoration(
-                        color: isSelected
-                            ? MyColor.splashBacColor
-                            : MyColor.grayColor.withAlpha(30),
-                        borderRadius: BorderRadius.circular(25),
-                        border: isSelected
-                            ? Border.all(
-                                color: MyColor.splashBacColor, width: 2)
-                            : Border.all(
-                                color: MyColor.grayColor.withAlpha(0),
-                                width: 2),
-                      ),
-                      child: Row(
+                          borderRadius: BorderRadius.circular(24),
+                          color: isSelected
+                              ? MyColor.splashBacColor
+                              : MyColor.grayColor.withAlpha(30),
+                          border: Border.all(
+                              color: isSelected
+                                  ? MyColor.whiteColor.withAlpha(150)
+                                  : MyColor.grayColor.withAlpha(0),
+                              width: isSelected ? 8 : 0)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SvgPicture.asset(
-                            options[index]["icon"],
-                            colorFilter: ColorFilter.mode(
-                                isSelected
-                                    ? MyColor.whiteColor
-                                    : MyColor.grayColor,
-                                BlendMode.srcIn),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: Text(
-                              options[index]["text"],
-                              style: regularTextStyle18.copyWith(
-                                fontSize: 16,
+                          Text(
+                            item[index]["text"],
+                            style: regularTextStyle18.copyWith(
                                 color: isSelected
                                     ? MyColor.whiteColor
                                     : MyColor.blackColor,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700),
                           ),
-                          Icon(
-                            isSelected
-                                ? Icons.radio_button_checked
-                                : Icons.radio_button_unchecked,
-                            color: isSelected
-                                ? MyColor.whiteColor
-                                : MyColor.grayColor,
+                          const SizedBox(height: 5,),
+                          Text(
+                            item[index]["text2"],
+                            style: regularTextStyle18.copyWith(
+                                color: isSelected
+                                    ? MyColor.whiteColor
+                                    : MyColor.grayColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          const Spacer(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              SvgPicture.asset(item[index]["image"],colorFilter: ColorFilter.mode(isSelected?MyColor.whiteColor:MyColor.grayColor.withAlpha(150), BlendMode.srcIn),),
+                            ],
                           ),
                         ],
                       ),
@@ -151,7 +149,7 @@ class _ScreenOneState extends State<ScreenOne> {
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, RouteHelper.screenTwo);
+                  //  Navigator.pushNamed(context, RouteHelper.screenThree);
                 },
                 style: ButtonStyle(
                     backgroundColor:

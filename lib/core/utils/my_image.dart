@@ -35,5 +35,12 @@ class MyImage{
    static String circleIcon="assets/icons/circleIcon.svg";
    static String gymMan="assets/images/gymman.png";
    static String gymLady="assets/images/gymlady.png";
+   static String experianeImage="assets/images/experianceImage.png";
+   static String sevenImage="assets/images/sevenpicture.png";
+   static String wheelChare="assets/images/wheelchare.png";
+   static String resturentIcon="assets/icons/resturenticon.svg";
+   static String tradionalIcon="assets/icons/tradionalicon.svg";
+   static String leafIcon="assets/icons/leafIcon.svg";
+   static String dietICon="assets/icons/dietIcon.svg";
 
 }

@@ -9,9 +9,8 @@ class ScreenTwo extends StatefulWidget {
   const ScreenTwo({super.key});
 
   @override
-  _ScreenTwoState createState() => _ScreenTwoState();
+  State<ScreenTwo> createState() => _ScreenTwoState();
 }
-
 class _ScreenTwoState extends State<ScreenTwo> {
   final List<Map<String, dynamic>> item = [
     {"image": MyImage.gymMan,},
@@ -90,7 +89,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                       borderRadius: BorderRadius.circular(40),
                       image:DecorationImage(image: AssetImage(item[index]["image"],),),
                       color: MyColor.grayColor.withAlpha(30),
-                      border: Border.all(color: isSelected?MyColor.splashBacColor:MyColor.grayColor.withAlpha(30),width: isSelected? 5:0)
+                      border: Border.all(color: isSelected?MyColor.splashBacColor:MyColor.grayColor.withAlpha(0),width: isSelected? 5:0)
                     ),
                   ),
                 );

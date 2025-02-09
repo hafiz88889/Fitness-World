@@ -1,4 +1,10 @@
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eight.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_five.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_four.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_one.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_seven.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_six.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/reset_password_page.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/sign_in_page.dart';
@@ -14,8 +20,6 @@ import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_three.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_two.dart';
 import 'package:flutter/material.dart';
-
-import '../../features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import '../../features/sing_in_sign_up_screen/presentation/screen/password_sent_screen.dart';
 
 class RouteHelper{
@@ -36,6 +40,11 @@ class RouteHelper{
   static String screenOne="/screenOne";
   static String screenTwo="/ScreenTwo";
   static String screenThree="/ScreenThree";
+  static String screenFour="/ScreenFour";
+  static String screenFive="/ScreenFive";
+  static String screenSix="/ScreenSix";
+  static String screenSeven="/ScreenSeven";
+  static String screenEight="/ScreenEight";
 
 
 
@@ -61,7 +70,12 @@ return{
   RouteHelper.passwordSentScreen:(context)=>const PasswordSentScreen(),
   RouteHelper.screenOne:(context)=>const ScreenOne(),
   RouteHelper.screenTwo:(context)=>const ScreenTwo(),
-  RouteHelper.screenThree:(context)=>const ScreenThree(),
+  RouteHelper.screenThree:(context)=> const ScreenThree(),
+  RouteHelper.screenFour:(context)=> const ScreenFour(),
+  RouteHelper.screenFive:(context)=> const ScreenFive(),
+  RouteHelper.screenSix:(context)=> const ScreenSix(),
+  RouteHelper.screenSeven:(context)=> const ScreenSeven(),
+  RouteHelper.screenEight:(context)=> const ScreenEight(),
 
 
 };

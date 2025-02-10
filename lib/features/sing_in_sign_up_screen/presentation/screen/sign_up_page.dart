@@ -92,51 +92,50 @@ class SignUpPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(15),
-              child: Expanded(
-                  child: SizedBox(
-                    height: 56,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25),side: BorderSide(color: MyColor.redColor)),
-                            content: Row(
-                              children: [
-                                SvgPicture.asset(MyImage.warningIcon),
-                                const SizedBox(width: 10,),
-                                Text(
-                                  'Error: Passwords do not match!',
-                                  style: regularTextStyle24.copyWith(color: MyColor.blackColor,fontSize: 14),
-                                ),
-                              ],
+              child: SizedBox(
+                height: 56,
+                child: ElevatedButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25),side: BorderSide(color: MyColor.redColor)),
+                        content: Row(
+                          children: [
+                            SvgPicture.asset(MyImage.warningIcon),
+                            const SizedBox(width: 10,),
+                            Text(
+                              'Error: Passwords do not match!',
+                              style: regularTextStyle24.copyWith(color: MyColor.blackColor,fontSize: 14),
                             ),
-                            backgroundColor: MyColor.splashBacColor.withAlpha(150), // Snackbar background color
-                            behavior: SnackBarBehavior.floating, // Floating Snackbar
-                           // Margin for the Snackbar
-                          ),
-                        );
-                      },
-                      style: ButtonStyle(
-                          backgroundColor:
-                          WidgetStateProperty.all(MyColor.blackColor),
-                          shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(19)))),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Sign Up",
-                            style: regularTextStyle18.copyWith(
-                                color: MyColor.whiteColor, fontSize: 16),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          SvgPicture.asset(MyImage.arrowRight)
-                        ],
+                          ],
+                        ),
+                        backgroundColor: MyColor.splashBacColor.withAlpha(150), // Snackbar background color
+                        behavior: SnackBarBehavior.floating, // Floating Snackbar
+                       // Margin for the Snackbar
                       ),
-                    ),
-                  )),
+                    );
+                  },
+                  style: ButtonStyle(
+                      backgroundColor:
+                      WidgetStateProperty.all(MyColor.blackColor),
+                      shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(19)))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Sign Up",
+                        style: regularTextStyle18.copyWith(
+                            color: MyColor.whiteColor, fontSize: 16),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      SvgPicture.asset(MyImage.arrowRight)
+                    ],
+                  ),
+                ),
+              ),
             ),
             const SizedBox(
               height: 30,

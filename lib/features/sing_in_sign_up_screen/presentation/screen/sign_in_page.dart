@@ -81,34 +81,33 @@ class SignInPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(15),
-              child: Expanded(
-                  child: SizedBox(
-                height: 56,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RouteHelper.screenOne);
-                  },
-                  style: ButtonStyle(
-                      backgroundColor:
-                          WidgetStateProperty.all(MyColor.blackColor),
-                      shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(19)))),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Sign In",
-                        style: regularTextStyle18.copyWith(
-                            color: MyColor.whiteColor, fontSize: 16),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      SvgPicture.asset(MyImage.arrowRight)
-                    ],
+              child: SizedBox(
+                              height: 56,
+                              child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, RouteHelper.screenOne);
+              },
+              style: ButtonStyle(
+                  backgroundColor:
+                      WidgetStateProperty.all(MyColor.blackColor),
+                  shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(19)))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Sign In",
+                    style: regularTextStyle18.copyWith(
+                        color: MyColor.whiteColor, fontSize: 16),
                   ),
-                ),
-              )),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  SvgPicture.asset(MyImage.arrowRight)
+                ],
+              ),
+                              ),
+                            ),
             ),
             const SizedBox(
               height: 40,

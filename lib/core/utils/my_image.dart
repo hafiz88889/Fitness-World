@@ -59,5 +59,16 @@ class MyImage{
    static String watchIcon="assets/icons/watchICon.svg";
    static String bodyXray="assets/images/bodyxray.png";
    static String cameraIcon="assets/icons/cameraIcon.svg";
+   static String modelIcon="assets/images/modeImage.jpg";
+   static String loveIcon="assets/icons/loveIcon.svg";
+   static String kgIcon="assets/icons/kgIcon.svg";
+   static String homeIcon="assets/icons/homeIcon.svg";
+   static String settingIcn="assets/icons/settingIcon.svg";
+   static String arrowRoundRight="assets/icons/arrowroundrighticon.svg";
+   static String arrowRoundLaft="assets/icons/arrowroundbackIcon.svg";
+   static String copyIcon="assets/icons/copyICon.svg";
+   static String voiceIcon="assets/icons/voiceIcon.svg";
+   static String voiceImage="assets/images/voiceimag.png";
+
 
 }

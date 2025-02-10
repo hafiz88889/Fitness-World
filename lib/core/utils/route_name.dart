@@ -1,4 +1,5 @@
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eight.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eighteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eleven.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_fifteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_five.dart';
@@ -7,7 +8,9 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_nine.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_one.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_seven.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_seventeen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_six.dart';
+import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_sixteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_ten.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_thirteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
@@ -59,6 +62,9 @@ class RouteHelper{
   static String screenThirteen="/ScreenThirteen";
   static String screenFourteen="/ScreenFourteen";
   static String screenFifteen="/ScreenFifteen";
+  static String screenSeventeen="/ScreenSeventeen";
+  static String screenSixteen="/ScreenSixteen";
+  static String screenEighteen="/ScreenEighteen";
 
 
 
@@ -97,6 +103,9 @@ return{
   RouteHelper.screenThirteen:(context)=>  const ScreenThirteen(),
   RouteHelper.screenFourteen:(context)=>  const ScreenFourteen(),
   RouteHelper.screenFifteen:(context)=>  const ScreenFifteen(),
+  RouteHelper.screenSeventeen:(context)=>  const ScreenSeventeen(),
+  RouteHelper.screenSixteen:(context)=>  const ScreenSixteen(),
+  RouteHelper.screenEighteen:(context)=>   const ScreenEighteen(),
 
 
 };

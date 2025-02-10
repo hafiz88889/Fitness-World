@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/widget/check_box_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -91,7 +92,7 @@ class _ScreenFifteenState extends State<ScreenFifteen> {
           height: 54,
           child: ElevatedButton(
             onPressed: () {
-            //  Navigator.pushNamed(context, RouteHelper.screenFour);
+              Navigator.pushNamed(context, RouteHelper.screenSeventeen);
             },
             style: ButtonStyle(
                 backgroundColor:

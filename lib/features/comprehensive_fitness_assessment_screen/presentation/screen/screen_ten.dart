@@ -5,19 +5,25 @@ import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ScreenEight extends StatefulWidget {
-  const ScreenEight({super.key});
+class ScreenTen extends StatefulWidget {
+  const ScreenTen({super.key});
 
   @override
-  State<ScreenEight> createState() => _ScreenEightState();
+  State<ScreenTen> createState() => _ScreenTenState();
 }
 
-class _ScreenEightState extends State<ScreenEight> {
+class _ScreenTenState extends State<ScreenTen> {
   final List<Map<String, dynamic>> item = [
-    {"image": MyImage.leafIcon, "text": "This no moe","text2": "TVegan"},
-    {"image": MyImage.dietICon, "text": "Carbo Diet","text2": "Bread, etc"},
-    {"image": MyImage.resturentIcon, "text": "Specialized","text2": "Paleo, keto, etc"},
-    {"image": MyImage.tradionalIcon, "text": "Traditional","text2": "Fruit diet"},
+    {"image": MyImage.joggingIcon, "text": "Jogging",},
+    {"image": MyImage.wakingIcon, "text": "Walking",},
+    {"image": MyImage.hikingIcon, "text": "Hiking",},
+    {"image": MyImage.skatingIcon, "text": "Skating",},
+    {"image": MyImage.bikingIcon, "text": "Biking",},
+    {"image": MyImage.weightLiftIcon, "text": "Weightlift",},
+    {"image": MyImage.cardioIcon, "text": "Cardio",},
+    {"image": MyImage.yogaIcon, "text": "Yoga",},
+    {"image": MyImage.otherIcon, "text": "Other",},
+
   ];
   int selectedIndex = 1;
 
@@ -62,7 +68,7 @@ class _ScreenEightState extends State<ScreenEight> {
                       borderRadius: BorderRadius.circular(15),
                       color: MyColor.splashBacColorTwo.withAlpha(30)),
                   child: Text(
-                    "8 of 17",
+                    "10 of 17",
                     style: regularTextStyle24.copyWith(
                         color: MyColor.splashBacColorTwo, fontSize: 14),
                   ),
@@ -73,7 +79,7 @@ class _ScreenEightState extends State<ScreenEight> {
               height: 50,
             ),
             Text(
-              "Do you have a specific diet preference?",
+              "Do you have a specific Exercise Prefrence?",
               textAlign: TextAlign.center,
               style: regularTextStyle24.copyWith(fontSize: 30),
             ),
@@ -83,9 +89,9 @@ class _ScreenEightState extends State<ScreenEight> {
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 5,
-                  mainAxisSpacing: 5,
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10,
+                 mainAxisSpacing: 10,
                   childAspectRatio: 1,
                 ),
                 itemCount: item.length,
@@ -98,8 +104,8 @@ class _ScreenEightState extends State<ScreenEight> {
                       });
                     },
                     child: Container(
-                      padding: const EdgeInsets.all(20),
-                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.only(top: 10),
+                      alignment: Alignment.center,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24),
                           color: isSelected
@@ -113,32 +119,18 @@ class _ScreenEightState extends State<ScreenEight> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          SvgPicture.asset(item[index]["image"],colorFilter: ColorFilter.mode(isSelected? MyColor.whiteColor:MyColor.grayColor.withAlpha(120), BlendMode.srcIn),),
                           Text(
                             item[index]["text"],
                             style: regularTextStyle18.copyWith(
                                 color: isSelected
                                     ? MyColor.whiteColor
-                                    : MyColor.blackColor,
+                                    : MyColor.grayColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700),
                           ),
                           const SizedBox(height: 5,),
-                          Text(
-                            item[index]["text2"],
-                            style: regularTextStyle18.copyWith(
-                                color: isSelected
-                                    ? MyColor.whiteColor
-                                    : MyColor.grayColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          const Spacer(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              SvgPicture.asset(item[index]["image"],colorFilter: ColorFilter.mode(isSelected?MyColor.whiteColor:MyColor.grayColor.withAlpha(150), BlendMode.srcIn),),
-                            ],
-                          ),
+
                         ],
                       ),
                     ),
@@ -150,7 +142,7 @@ class _ScreenEightState extends State<ScreenEight> {
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                    Navigator.pushNamed(context, RouteHelper.screenNine);
+                    Navigator.pushNamed(context, RouteHelper.screenEleven);
                 },
                 style: ButtonStyle(
                     backgroundColor:

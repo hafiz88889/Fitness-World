@@ -42,5 +42,22 @@ class MyImage{
    static String tradionalIcon="assets/icons/tradionalicon.svg";
    static String leafIcon="assets/icons/leafIcon.svg";
    static String dietICon="assets/icons/dietIcon.svg";
+   static String bikingIcon="assets/icons/biking.svg";
+   static String cardioIcon="assets/icons/cardio.svg";
+   static String hikingIcon="assets/icons/hiking.svg";
+   static String joggingIcon="assets/icons/jogging.svg";
+   static String otherIcon="assets/icons/other.svg";
+   static String skatingIcon="assets/icons/skating.svg";
+   static String wakingIcon="assets/icons/walking.svg";
+   static String weightLiftIcon="assets/icons/weightlift.svg";
+   static String yogaIcon="assets/icons/yoga.svg";
+   static String medicineImage="assets/images/medicinimage.png";
+   static String searchIcon="assets/icons/searchIcon.svg";
+   static String addIcon="assets/icons/addIcon.svg";
+   static String substractIcon="assets/icons/substractIcon.svg";
+   static String emojiIconOne="assets/icons/emojione.svg";
+   static String watchIcon="assets/icons/watchICon.svg";
+   static String bodyXray="assets/images/bodyxray.png";
+   static String cameraIcon="assets/icons/cameraIcon.svg";
 
 }

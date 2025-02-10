@@ -5,21 +5,24 @@ import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ScreenEight extends StatefulWidget {
-  const ScreenEight({super.key});
+class ScreenFourteen extends StatefulWidget {
+  const ScreenFourteen({super.key});
 
   @override
-  State<ScreenEight> createState() => _ScreenEightState();
+  State<ScreenFourteen> createState() => _ScreenFourteenState();
 }
 
-class _ScreenEightState extends State<ScreenEight> {
-  final List<Map<String, dynamic>> item = [
-    {"image": MyImage.leafIcon, "text": "This no moe","text2": "TVegan"},
-    {"image": MyImage.dietICon, "text": "Carbo Diet","text2": "Bread, etc"},
-    {"image": MyImage.resturentIcon, "text": "Specialized","text2": "Paleo, keto, etc"},
-    {"image": MyImage.tradionalIcon, "text": "Traditional","text2": "Fruit diet"},
+class _ScreenFourteenState extends State<ScreenFourteen> {
+  int selectedIndex = 0;
+
+  final List<Map<String, dynamic>> options = [
+    {"icon": MyImage.emojiIconOne,"icon2": MyImage.watchIcon, "text": "Excellent","text2": ">8 hours"},
+    {"icon": MyImage.emojiIconOne,"icon2": MyImage.watchIcon, "text": "Great","text2": "7-8 hours"},
+    {"icon": MyImage.emojiIconOne,"icon2": MyImage.watchIcon, "text": "Normal","text2": "6-7 hours"},
+    {"icon": MyImage.emojiIconOne,"icon2": MyImage.watchIcon, "text": "Bad","text2": "3-4 hours"},
+    {"icon": MyImage.emojiIconOne,"icon2": MyImage.watchIcon, "text": "Insomniac","text2": "<2 hours"},
+
   ];
-  int selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +65,7 @@ class _ScreenEightState extends State<ScreenEight> {
                       borderRadius: BorderRadius.circular(15),
                       color: MyColor.splashBacColorTwo.withAlpha(30)),
                   child: Text(
-                    "8 of 17",
+                    "14 of 17",
                     style: regularTextStyle24.copyWith(
                         color: MyColor.splashBacColorTwo, fontSize: 14),
                   ),
@@ -73,22 +76,16 @@ class _ScreenEightState extends State<ScreenEight> {
               height: 50,
             ),
             Text(
-              "Do you have a specific diet preference?",
+              "What’s your sleep quality like?",
               textAlign: TextAlign.center,
               style: regularTextStyle24.copyWith(fontSize: 30),
             ),
             const SizedBox(
-              height: 10,
+              height: 50,
             ),
             Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 5,
-                  mainAxisSpacing: 5,
-                  childAspectRatio: 1,
-                ),
-                itemCount: item.length,
+              child: ListView.builder(
+                itemCount: options.length,
                 itemBuilder: (context, index) {
                   bool isSelected = index == selectedIndex;
                   return GestureDetector(
@@ -98,47 +95,47 @@ class _ScreenEightState extends State<ScreenEight> {
                       });
                     },
                     child: Container(
-                      padding: const EdgeInsets.all(20),
-                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 16),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(24),
-                          color: isSelected
-                              ? MyColor.splashBacColor
-                              : MyColor.grayColor.withAlpha(30),
-                          border: Border.all(
-                              color: isSelected
-                                  ? MyColor.whiteColor.withAlpha(150)
-                                  : MyColor.grayColor.withAlpha(0),
-                              width: isSelected ? 8 : 0)),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        color: isSelected
+                            ? MyColor.splashBacColor
+                            : MyColor.grayColor.withAlpha(15),
+                        borderRadius: BorderRadius.circular(25),
+                        border: isSelected
+                            ? Border.all(
+                                color: MyColor.splashBacColor, width: 2)
+                            : Border.all(
+                                color: MyColor.grayColor.withAlpha(0),
+                                width: 2),
+                      ),
+                      child: Row(
                         children: [
-                          Text(
-                            item[index]["text"],
-                            style: regularTextStyle18.copyWith(
+                          SvgPicture.asset(
+                            options[index]["icon"],
+                            colorFilter: ColorFilter.mode(
+                                isSelected
+                                    ? MyColor.whiteColor
+                                    : MyColor.grayColor.withAlpha(150),
+                                BlendMode.srcIn),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Text(
+                              options[index]["text"],
+                              style: regularTextStyle18.copyWith(
+                                fontSize: 16,
                                 color: isSelected
                                     ? MyColor.whiteColor
                                     : MyColor.blackColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                          const SizedBox(height: 5,),
-                          Text(
-                            item[index]["text2"],
-                            style: regularTextStyle18.copyWith(
-                                color: isSelected
-                                    ? MyColor.whiteColor
-                                    : MyColor.grayColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          const Spacer(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              SvgPicture.asset(item[index]["image"],colorFilter: ColorFilter.mode(isSelected?MyColor.whiteColor:MyColor.grayColor.withAlpha(150), BlendMode.srcIn),),
-                            ],
-                          ),
+                          SvgPicture.asset(options[index]["icon2"],colorFilter: ColorFilter.mode(isSelected?MyColor.whiteColor:MyColor.grayColor.withAlpha(150), BlendMode.srcIn),),
+                          const SizedBox(width: 8,),
+                          Text(options[index]["text2"],style: regularTextStyle24.copyWith(fontSize: 14,color: isSelected?MyColor.whiteColor:MyColor.grayColor),)
                         ],
                       ),
                     ),
@@ -150,7 +147,7 @@ class _ScreenEightState extends State<ScreenEight> {
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                    Navigator.pushNamed(context, RouteHelper.screenNine);
+                  Navigator.pushNamed(context, RouteHelper.screenFifteen);
                 },
                 style: ButtonStyle(
                     backgroundColor:

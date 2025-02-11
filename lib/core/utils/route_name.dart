@@ -16,6 +16,7 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_five.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_four.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_one.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_three.dart';
@@ -73,6 +74,7 @@ class RouteHelper{
   static String profileScreenTwo="/ProfileScreenTwo";
   static String profileScreenThree="/ProfileScreenThree";
   static String profileScreenFour="/ProfileScreenFour";
+  static String profileScreenFive="/ProfileScreenFive";
 
 
 
@@ -118,6 +120,7 @@ return{
   RouteHelper.profileScreenTwo:(context)=>   const ProfileScreenTwo(),
   RouteHelper.profileScreenThree:(context)=>   const ProfileScreenThree(),
   RouteHelper.profileScreenFour:(context)=>   const ProfileScreenFour(),
+  RouteHelper.profileScreenFive:(context)=>    ProfileScreenFive(),
 
 
 };

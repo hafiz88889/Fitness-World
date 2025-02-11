@@ -19,7 +19,7 @@ class _ProfileScreenThreeState extends State<ProfileScreenThree> {
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
       body: Padding(
-        padding: const EdgeInsets.only(top: 40,left: 20,right: 10),
+        padding: const EdgeInsets.only(top: 40,left: 10,right: 10),
       child: Column(
         children: [
           Row(
@@ -82,7 +82,7 @@ class _ProfileScreenThreeState extends State<ProfileScreenThree> {
             alignment: MainAxisAlignment.center,
             barRadius: const Radius.circular(20),
             padding: const EdgeInsets.all(1),
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width-40,
             lineHeight: 12.0,
             percent: 0.5,
             backgroundColor: MyColor.borderColor,

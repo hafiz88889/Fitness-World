@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/widget/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -69,14 +70,14 @@ class _ProfileScreenFourState extends State<ProfileScreenFour> {
               child: SvgPicture.asset(MyImage.copyIcon),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: SizedBox(
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                  //Navigator.pushNamed(context, RouteHelper.profileScreenFour);
+                  Navigator.pushNamed(context, RouteHelper.profileScreenFive);
                 },
                 style: ButtonStyle(
                     backgroundColor:

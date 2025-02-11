@@ -69,6 +69,14 @@ class MyImage{
    static String copyIcon="assets/icons/copyICon.svg";
    static String voiceIcon="assets/icons/voiceIcon.svg";
    static String voiceImage="assets/images/voiceimag.png";
+   static String dollImage="assets/images/dollImage.png";
+   static String uploadIcn="assets/icons/upload.png";
+   static String ladyProfile="assets/images/ladyprofile.png";
+   static String editIcon="assets/icons/editicon.png";
+   static String userIcon="assets/icons/userIcon.png";
+   static String radioButtonFilled="assets/icons/radiobuttonfilled.png";
+   static String radioButtonNotFilled="assets/icons/radiobuttonnotfilled.png";
+   static String locationIcon="assets/icons/locationIcon.png";
 
 
 }

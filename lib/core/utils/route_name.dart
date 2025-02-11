@@ -16,6 +16,10 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_four.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_one.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_three.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_two.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/reset_password_page.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/sign_in_page.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/sign_up_page.dart';
@@ -65,6 +69,10 @@ class RouteHelper{
   static String screenSeventeen="/ScreenSeventeen";
   static String screenSixteen="/ScreenSixteen";
   static String screenEighteen="/ScreenEighteen";
+  static String profileScreenOne="/ProfileScreenOne";
+  static String profileScreenTwo="/ProfileScreenTwo";
+  static String profileScreenThree="/ProfileScreenThree";
+  static String profileScreenFour="/ProfileScreenFour";
 
 
 
@@ -106,6 +114,10 @@ return{
   RouteHelper.screenSeventeen:(context)=>  const ScreenSeventeen(),
   RouteHelper.screenSixteen:(context)=>  const ScreenSixteen(),
   RouteHelper.screenEighteen:(context)=>   const ScreenEighteen(),
+  RouteHelper.profileScreenOne:(context)=>   const ProfileScreenOne(),
+  RouteHelper.profileScreenTwo:(context)=>   const ProfileScreenTwo(),
+  RouteHelper.profileScreenThree:(context)=>   const ProfileScreenThree(),
+  RouteHelper.profileScreenFour:(context)=>   const ProfileScreenFour(),
 
 
 };

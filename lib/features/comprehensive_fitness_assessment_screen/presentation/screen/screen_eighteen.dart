@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,13 +13,13 @@ class ScreenEighteen extends StatefulWidget {
 }
 final TextEditingController _controller=TextEditingController();
 int isMin=0;
-final int isMax=250;
+const int isMax=250;
 class _ScreenEighteenState extends State<ScreenEighteen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
-      body: Padding(padding: EdgeInsets.all(12),
+      body: Padding(padding: const EdgeInsets.all(12),
       child: Column(
         children: [
       const SizedBox(
@@ -165,7 +166,9 @@ class _ScreenEighteenState extends State<ScreenEighteen> {
           const SizedBox(height: 40,),
           SizedBox(
             height: 56,
-            child: ElevatedButton(onPressed: (){},
+            child: ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, RouteHelper.profileScreenOne);
+            },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: MyColor.blackColor,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15),)

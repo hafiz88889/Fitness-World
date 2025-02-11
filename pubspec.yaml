@@ -12,6 +12,7 @@ dependencies:
   percent_indicator: ^4.2.4
   syncfusion_flutter_gauges: ^28.2.4
   numberpicker: ^2.1.2
+  dotted_border: ^2.1.0
 
 
   cupertino_icons: ^1.0.8

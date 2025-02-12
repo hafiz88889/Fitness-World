@@ -5,7 +5,6 @@ import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 
 class ProfileScreenFive extends StatefulWidget {
   const ProfileScreenFive({super.key});
@@ -13,10 +12,8 @@ class ProfileScreenFive extends StatefulWidget {
   @override
   State<ProfileScreenFive> createState() => _ProfileScreenFiveState();
 }
-TextEditingController otpController = TextEditingController();
-String enteredOtp = "";
-bool isError = false;
-bool isSelect=true;
+List<TextEditingController> controllers = List.generate(4, (index) => TextEditingController());
+int selectedIndex = 0;
 class _ProfileScreenFiveState extends State<ProfileScreenFive> {
   @override
   Widget build(BuildContext context) {
@@ -70,37 +67,55 @@ class _ProfileScreenFiveState extends State<ProfileScreenFive> {
             const SizedBox(
               height: 50,
             ),
-            PinCodeTextField(
-              appContext: context,
-              length: 4,
-              obscureText: false,
-              keyboardType: TextInputType.number,
-              animationType: AnimationType.fade,
-              pinTheme: PinTheme(
-                shape: PinCodeFieldShape.box,
-                borderRadius: BorderRadius.circular(10),
-                fieldHeight: 60,
-                fieldWidth: 50,
-                activeColor: MyColor.splashBacColor,
-                inactiveColor: MyColor.grayColor,
-                selectedColor: MyColor.splashBacColor,
-                activeFillColor: MyColor.splashBacColor,
-                selectedFillColor: MyColor.whiteColor,
-                inactiveFillColor: MyColor.borderColor
-              ),
-              controller: otpController,
-              onChanged: (value) {
-                setState(() {
-                  enteredOtp = value;
-                });
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(4, (index) {
+                return Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                  height: 80,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: selectedIndex==index?MyColor.whiteColor.withAlpha(150):MyColor.grayColor,width: selectedIndex==index?5:1),
+                    color: selectedIndex == index ? MyColor.splashBacColor: MyColor.borderColor,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                    child: TextField(
+                      controller: controllers[index],
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      maxLength: 1,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: selectedIndex == index ? MyColor.whiteColor :MyColor.grayColor,
+                      ),
+                      cursorColor: Colors.transparent,
+                      decoration: const InputDecoration(
+                        counterText: "",
+                        border: InputBorder.none,
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          if (value.isNotEmpty && index < 3) {
+                            selectedIndex = index + 1;
+                          } else if (value.isEmpty && index > 0) {
+                            selectedIndex = index - 1;
+                          }
+                        });
+                      },
+                    ),
+                  ),
+                );
+              }),
             ),
+
             const Spacer(),
             SizedBox(
               height: 54,
               child: ElevatedButton(
                 onPressed: (){
-
+                  Navigator.pushNamed(context, RouteHelper.profileScreenSix);
                 },
                 style: ButtonStyle(
                     backgroundColor:
@@ -129,15 +144,11 @@ class _ProfileScreenFiveState extends State<ProfileScreenFive> {
             RichText(
               text: TextSpan(
                 text: "Didn’t receive your OTP? ",
-                style: TextStyle(color: Colors.black),
+                style: regularTextStyle18.copyWith(fontSize: 14),
                 children: [
                   TextSpan(
                     text: "Send again",
-                    style: TextStyle(
-                      color: Colors.orange,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
+                    style:regularTextStyle18.copyWith(fontSize: 14,color: MyColor.splashBacColor,decoration: TextDecoration.underline)
                   ),
                 ],
               ),

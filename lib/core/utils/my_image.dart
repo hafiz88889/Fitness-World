@@ -77,6 +77,19 @@ class MyImage{
    static String radioButtonFilled="assets/icons/radiobuttonfilled.png";
    static String radioButtonNotFilled="assets/icons/radiobuttonnotfilled.png";
    static String locationIcon="assets/icons/locationIcon.png";
+   static String pringerPrintImage="assets/images/fringerprintImage.jpg";
+   static String bellImage="assets/images/bellImage.png";
+   static String wallPaperImage="assets/images/walpaper.jpg";
+   static String fireIcon="assets/icons/fireIcon.svg";
+   static String notifictionIcon="assets/icons/notificationicon.png";
+   static String graphIcon="assets/icons/graph.png";
+   static String graphLineIcon="assets/icons/graphlineIcon.png";
+   static String threeDotMenuIcon="assets/icons/dotsmenuIcon.png";
+   static String bodyImage="assets/images/bodyImage.jpg";
+   static String plateImage="assets/images/plateImage.jpg";
+   static String chartImage="assets/images/chart.JPG";
+   static String robotBanner="assets/images/robotBanner.jpg";
+   static String messageIcon="assets/icons/messageIcon.png";
 
 
 }

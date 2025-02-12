@@ -16,9 +16,14 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
+import 'package:fitnessworld/features/home_screen/presentation/home_page_one.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_eight.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_five.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_four.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_nine.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_one.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_seven.dart';
+import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_six.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_three.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_two.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/reset_password_page.dart';
@@ -75,6 +80,11 @@ class RouteHelper{
   static String profileScreenThree="/ProfileScreenThree";
   static String profileScreenFour="/ProfileScreenFour";
   static String profileScreenFive="/ProfileScreenFive";
+  static String profileScreenSix="/ProfileScreenSix";
+  static String profileScreenSeven="/ProfileScreenSeven";
+  static String profileScreenEight="/ProfileScreenEight";
+  static String profileScreenNine="/ProfileScreenNine";
+  static String homePageOne="/HomePageOne";
 
 
 
@@ -120,7 +130,12 @@ return{
   RouteHelper.profileScreenTwo:(context)=>   const ProfileScreenTwo(),
   RouteHelper.profileScreenThree:(context)=>   const ProfileScreenThree(),
   RouteHelper.profileScreenFour:(context)=>   const ProfileScreenFour(),
-  RouteHelper.profileScreenFive:(context)=>    ProfileScreenFive(),
+  RouteHelper.profileScreenFive:(context)=>    const ProfileScreenFive(),
+  RouteHelper.profileScreenSix:(context)=>    const ProfileScreenSix(),
+  RouteHelper.profileScreenSeven:(context)=> const ProfileScreenSeven(),
+  RouteHelper.profileScreenEight:(context)=> const ProfileScreenEight(),
+  RouteHelper.profileScreenNine:(context)=> const ProfileScreenNine(),
+  RouteHelper.homePageOne:(context)=> const HomePageOne(),
 
 
 };

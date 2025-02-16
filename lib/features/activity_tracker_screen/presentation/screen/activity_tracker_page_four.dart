@@ -33,7 +33,11 @@ class ActivityTrackerPageFour extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              SvgPicture.asset(MyImage.backGroundFullPlus,height: 60,width: 60,),
+              GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context, RouteHelper.activityTrackerPageFive);
+                  },
+                  child: SvgPicture.asset(MyImage.backGroundFullPlus,height: 60,width: 60,)),
               const SizedBox(height: 30,),
               Text(
                 "Picking optimal jogging routes..",

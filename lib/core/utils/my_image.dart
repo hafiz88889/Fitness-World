@@ -101,6 +101,8 @@ class MyImage{
    static String pineAppleICon="assets/icons/pineappleicon.png";
    static String walPaperTwo="assets/images/walpaper1.JPG";
    static String manImage="assets/images/manImage.jpg";
+   static String mapImage="assets/images/mapImage.jpg";
+   static String questionMarkIcon="assets/icons/questionmarkIcon.png";
 
 
 }

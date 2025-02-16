@@ -180,7 +180,8 @@ class _ScreenEighteenState extends State<ScreenEighteen> {
                     const SizedBox(width: 10,),
                     SvgPicture.asset(MyImage.rightArrowIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),),
                   ],
-                )),
+                )
+            ),
           ),
         ],
       ),

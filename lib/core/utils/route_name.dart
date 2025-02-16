@@ -1,3 +1,4 @@
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_five.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_four.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_one.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_three.dart';
@@ -115,6 +116,7 @@ class RouteHelper{
   static String activityTrackerPageTwo="/ActivityTrackerPageTwo";
   static String activityTrackerPageThree="/ActivityTrackerPageThree";
   static String activityTrackerPageFour="/ActivityTrackerPageFour";
+  static String activityTrackerPageFive="/ActivityTrackerPageFive";
 
 
 
@@ -181,6 +183,7 @@ return{
   RouteHelper.activityTrackerPageTwo:(context)=>   const ActivityTrackerPageTwo(),
   RouteHelper.activityTrackerPageThree:(context)=>   const ActivityTrackerPageThree(),
   RouteHelper.activityTrackerPageFour:(context)=>   const ActivityTrackerPageFour(),
+  RouteHelper.activityTrackerPageFive:(context)=>   const ActivityTrackerPageFive(),
 
 
 };

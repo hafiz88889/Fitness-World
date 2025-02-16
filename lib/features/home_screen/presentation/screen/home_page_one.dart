@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/home_screen/presentation/widget/diet_nutriton_widget.dart';
 import 'package:fitnessworld/features/home_screen/presentation/widget/fitness_metrics_widget.dart';
 import 'package:fitnessworld/features/home_screen/presentation/widget/fitness_resource_widget.dart';
@@ -150,7 +151,7 @@ class _HomePageOneState extends State<HomePageOne> {
             ),
           ],
         ),
-       Padding(padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+       Padding(padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
        child: Column(
          children: [
            const SizedBox(
@@ -175,12 +176,18 @@ class _HomePageOneState extends State<HomePageOne> {
              scrollDirection: Axis.horizontal,
              child: Row(
                children: [
-                 FitnessMetricsWidget(
-                     title1: "Score",
-                     image: MyImage.backGroundFullPlus,
-                     image2: MyImage.graphIcon,
-                     title2: "88%",
-                     color: MyColor.splashBacColor),
+                 GestureDetector(
+                   onTap:(){
+                     Navigator.pushNamed(
+                         context, RouteHelper.homeScreenTwo);
+           },
+                   child: FitnessMetricsWidget(
+                       title1: "Score",
+                       image: MyImage.backGroundFullPlus,
+                       image2: MyImage.graphIcon,
+                       title2: "88%",
+                       color: MyColor.splashBacColor),
+                 ),
                  FitnessMetricsWidget(
                      title1: "Hydration",
                      image: MyImage.fireIcon,

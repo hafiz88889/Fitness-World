@@ -10,5 +10,6 @@ class MyColor{
   static Color grayColor =const Color(0xff676C75);
   static Color beguniColor =const Color(0xff9333EA);
   static Color elevetedBackColor =const Color(0xffFFEDD5);
+  static Color greenColor =const Color(0xff82CD18);
 
 }

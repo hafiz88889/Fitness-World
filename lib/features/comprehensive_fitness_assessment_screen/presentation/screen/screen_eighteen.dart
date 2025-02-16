@@ -79,7 +79,7 @@ class _ScreenEighteenState extends State<ScreenEighteen> {
           const SizedBox(height: 40,),
           Expanded(
               child:Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: MyColor.borderColor,

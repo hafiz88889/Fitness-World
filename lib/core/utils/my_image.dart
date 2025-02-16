@@ -90,6 +90,17 @@ class MyImage{
    static String chartImage="assets/images/chart.JPG";
    static String robotBanner="assets/images/robotBanner.jpg";
    static String messageIcon="assets/icons/messageIcon.png";
+   static String sandowScore="assets/images/sandowScore.jpg";
+   static String hertIcon="assets/icons/hearticon.png";
+   static String plushICon="assets/icons/plusicon.png";
+   static String gymLadyTwo="assets/images/gymladytwo.jpg";
+   static String watchImage="assets/images/watchImage.png";
+   static String chartImageTwo="assets/images/charttwo.JPG";
+   static String runningIcon="assets/icons/runningicon.png";
+   static String bennerImageOne="assets/images/bannerimage.JPG";
+   static String pineAppleICon="assets/icons/pineappleicon.png";
+   static String walPaperTwo="assets/images/walpaper1.JPG";
+   static String manImage="assets/images/manImage.jpg";
 
 
 }

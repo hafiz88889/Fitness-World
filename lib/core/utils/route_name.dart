@@ -1,3 +1,7 @@
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_four.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_one.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_three.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_two.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eight.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eighteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eleven.dart';
@@ -16,7 +20,18 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
-import 'package:fitnessworld/features/home_screen/presentation/home_page_one.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_four.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_one.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_eight.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_eleven.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_five.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_nine.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_seven.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_six.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_ten.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_three.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_twelve.dart';
+import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_eight.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_five.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_four.dart';
@@ -85,6 +100,21 @@ class RouteHelper{
   static String profileScreenEight="/ProfileScreenEight";
   static String profileScreenNine="/ProfileScreenNine";
   static String homePageOne="/HomePageOne";
+  static String homeScreenTwo="/HomeScreenTwo";
+  static String homeScreenThree="/HomeScreenThree";
+  static String homeScreenFour="/HomeScreenFour";
+  static String homeScreenFive="/HomeScreenFive";
+  static String homeScreenSix="/HomeScreenSix";
+  static String homeScreenSeven="/HomeScreenSeven";
+  static String homeScreenEight="/HomeScreenEight";
+  static String homeScreenNine="/HomeScreenNine";
+  static String homeScreenTen="/HomeScreenTen";
+  static String homeScreenEleven="/HomeScreenEleven";
+  static String homeScreenTwelve="/HomeScreenTwelve";
+  static String activityTrackerPageOne="/ActivityTrackerPageOne";
+  static String activityTrackerPageTwo="/ActivityTrackerPageTwo";
+  static String activityTrackerPageThree="/ActivityTrackerPageThree";
+  static String activityTrackerPageFour="/ActivityTrackerPageFour";
 
 
 
@@ -136,6 +166,21 @@ return{
   RouteHelper.profileScreenEight:(context)=> const ProfileScreenEight(),
   RouteHelper.profileScreenNine:(context)=> const ProfileScreenNine(),
   RouteHelper.homePageOne:(context)=> const HomePageOne(),
+  RouteHelper.homeScreenTwo:(context)=> const HomeScreenTwo(),
+  RouteHelper.homeScreenThree:(context)=> const HomeScreenThree(),
+  RouteHelper.homeScreenFour:(context)=> const HomeScreenFour(),
+  RouteHelper.homeScreenFive:(context)=> const HomeScreenFive(),
+  RouteHelper.homeScreenSix:(context)=> const HomeScreenSix(),
+  RouteHelper.homeScreenSeven:(context)=> const HomeScreenSeven(),
+  RouteHelper.homeScreenEight:(context)=>  const HomeScreenEight(),
+  RouteHelper.homeScreenNine:(context)=>  const HomeScreenNine(),
+  RouteHelper.homeScreenTen:(context)=>   const HomeScreenTen(),
+  RouteHelper.homeScreenEleven:(context)=>   const HomeScreenEleven(),
+  RouteHelper.homeScreenTwelve:(context)=>   const HomeScreenTwelve(),
+  RouteHelper.activityTrackerPageOne:(context)=>   const ActivityTrackerPageOne(),
+  RouteHelper.activityTrackerPageTwo:(context)=>   const ActivityTrackerPageTwo(),
+  RouteHelper.activityTrackerPageThree:(context)=>   const ActivityTrackerPageThree(),
+  RouteHelper.activityTrackerPageFour:(context)=>   const ActivityTrackerPageFour(),
 
 
 };

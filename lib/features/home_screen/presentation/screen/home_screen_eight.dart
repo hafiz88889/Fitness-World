@@ -72,11 +72,7 @@ class _HomeScreenEightState extends State<HomeScreenEight> {
                       color: MyColor.borderColor),
                   child: Row(
                     children: [
-                      SvgPicture.asset(
-                        MyImage.watchIcon,
-                        colorFilter:
-                            ColorFilter.mode(MyColor.grayColor, BlendMode.srcIn),
-                      ),
+                      Image(image: AssetImage(MyImage.calenderIcon),height: 20,width: 20,color: MyColor.grayColor,),
                       Text(
                         "date",
                         style: regularTextStyle18.copyWith(

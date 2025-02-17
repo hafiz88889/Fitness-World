@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,14 +12,14 @@ class SetRouteBottomsheetWidget extends StatefulWidget {
   State<SetRouteBottomsheetWidget> createState() => _SetRouteBottomsheetWidgetState();
 }
 String selectedGender = "8001,New york";
-List<String> genders = ["Washington DC", "Texas", "Pensilvenia", "Florida", "8001,New york"];
+List<String> placeName = ["Washington DC", "Texas", "Pensilvenia", "Florida", "8001,New york"];
 class _SetRouteBottomsheetWidgetState extends State<SetRouteBottomsheetWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: const BorderRadius.only(topLeft: Radius.circular(60),topRight: Radius.circular(60)),
         color: MyColor.borderColor,
       ),
       child: Column(
@@ -63,7 +64,7 @@ class _SetRouteBottomsheetWidgetState extends State<SetRouteBottomsheetWidget> {
                     selectedGender = newValue!;
                   });
                 },
-                items: genders.map((String gender) {
+                items: placeName.map((String gender) {
                   return DropdownMenuItem<String>(
                     value: gender,
                     child: Text(gender),
@@ -93,7 +94,7 @@ class _SetRouteBottomsheetWidgetState extends State<SetRouteBottomsheetWidget> {
                     selectedGender = newValue!;
                   });
                 },
-                items: genders.map((String gender) {
+                items: placeName.map((String gender) {
                   return DropdownMenuItem<String>(
                     value: gender,
                     child: Text(gender),
@@ -107,7 +108,7 @@ class _SetRouteBottomsheetWidgetState extends State<SetRouteBottomsheetWidget> {
             height: 54,
             child: ElevatedButton(
               onPressed: () {
-              //  Navigator.pushNamed(context, RouteHelper.screenFour);
+                Navigator.pushNamed(context, RouteHelper.activityTrackerPageSix);
               },
               style: ButtonStyle(
                   backgroundColor:

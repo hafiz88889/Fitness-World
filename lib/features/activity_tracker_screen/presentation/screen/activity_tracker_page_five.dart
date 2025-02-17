@@ -62,9 +62,11 @@ class _ActivityTrackerPageFiveState extends State<ActivityTrackerPageFive> {
               GestureDetector(
                 onTap: (){
                  showModalBottomSheet(
-                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30))),
                      context: context, builder: (BuildContext){
-                   return  const SetRouteBottomsheetWidget();
+                   return const FractionallySizedBox(
+                     heightFactor: 0.8,
+                     child: SetRouteBottomsheetWidget(),
+                   );
                  });
                 },
                 child: Container(

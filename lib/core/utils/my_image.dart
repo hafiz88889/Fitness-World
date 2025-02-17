@@ -103,6 +103,9 @@ class MyImage{
    static String manImage="assets/images/manImage.jpg";
    static String mapImage="assets/images/mapImage.jpg";
    static String questionMarkIcon="assets/icons/questionmarkIcon.png";
+   static String pauseIcon="assets/icons/pauseICon.png";
+   static String calenderIcon="assets/icons/calendaricon.png";
+   static String filterIcon="assets/icons/fiilterIcon.png";
 
 
 }

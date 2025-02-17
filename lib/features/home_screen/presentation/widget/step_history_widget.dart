@@ -10,9 +10,16 @@ class StepHistoryWidget extends StatelessWidget {
   final String title3;
   final String image;
   final Color color;
+  final Widget? icon;
 
   const StepHistoryWidget(
-      {super.key, required this.title1, required this.title2, required this.title3, required this.image, required this.color});
+      {super.key,
+      required this.title1,
+      required this.title2,
+      required this.title3,
+      required this.image,
+      required this.color,
+      this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +38,7 @@ class StepHistoryWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(25),
                 color: color,
               ),
-              child: Image(image: AssetImage(image),
-                height: 25,
-                width: 25,
-                color: MyColor.whiteColor,)
+              child: SvgPicture.asset(image,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 25,width: 25,)
           ),
           const SizedBox(width: 10,),
           Column(
@@ -63,7 +67,7 @@ class StepHistoryWidget extends StatelessWidget {
           const Spacer(),
           Transform.rotate(
               angle: 3,
-              child: SvgPicture.asset(MyImage.backIcon))
+              child: icon)
         ],
       ),
     );

@@ -1,8 +1,11 @@
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_five.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_four.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_one.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_six.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_three.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_two.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_eight.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_seven.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eight.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eighteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eleven.dart';
@@ -117,6 +120,9 @@ class RouteHelper{
   static String activityTrackerPageThree="/ActivityTrackerPageThree";
   static String activityTrackerPageFour="/ActivityTrackerPageFour";
   static String activityTrackerPageFive="/ActivityTrackerPageFive";
+  static String activityTrackerPageSix="/ActivityTrackerPageFive";
+  static String activityTrackerPageSeven="/Activity_Tracker_Page-Seven";
+  static String activityTrackerPageEight="/ActivityTrackerPageEightSeven";
 
 
 
@@ -184,6 +190,9 @@ return{
   RouteHelper.activityTrackerPageThree:(context)=>   const ActivityTrackerPageThree(),
   RouteHelper.activityTrackerPageFour:(context)=>   const ActivityTrackerPageFour(),
   RouteHelper.activityTrackerPageFive:(context)=>   const ActivityTrackerPageFive(),
+  RouteHelper.activityTrackerPageSix:(context)=>   const ActivityTrackerPageSix(),
+  RouteHelper.activityTrackerPageSeven:(context)=>   const ActivityTrackerPageSeven(),
+  RouteHelper.activityTrackerPageEight:(context)=>   ActivityTrackerPageEight(),
 
 
 };

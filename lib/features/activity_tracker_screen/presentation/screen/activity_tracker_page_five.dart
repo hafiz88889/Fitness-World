@@ -7,13 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class ActivityTrackerPageFive extends StatefulWidget {
-  const ActivityTrackerPageFive({super.key});
+class ActivityPageFive extends StatefulWidget {
+  const ActivityPageFive({super.key});
 
   @override
-  State<ActivityTrackerPageFive> createState() => _ActivityTrackerPageFiveState();
+  State<ActivityPageFive> createState() => _ActivityPageFiveState();
 }
-class _ActivityTrackerPageFiveState extends State<ActivityTrackerPageFive> {
+class _ActivityPageFiveState extends State<ActivityPageFive> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -62,7 +62,7 @@ class _ActivityTrackerPageFiveState extends State<ActivityTrackerPageFive> {
               GestureDetector(
                 onTap: (){
                  showModalBottomSheet(
-                     context: context, builder: (BuildContext){
+                     context: context, builder: (Builder){
                    return const FractionallySizedBox(
                      heightFactor: 0.8,
                      child: SetRouteBottomsheetWidget(),

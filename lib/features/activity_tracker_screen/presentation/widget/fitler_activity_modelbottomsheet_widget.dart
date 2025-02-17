@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -10,7 +11,7 @@ class FitlerActivityModelbottomsheetWidget extends StatefulWidget {
   @override
   State<FitlerActivityModelbottomsheetWidget> createState() => _FitlerActivityModelbottomsheetWidgetState();
 }
-RangeValues _selectedRange = RangeValues(10, 15);
+RangeValues _selectedRange = const RangeValues(10, 15);
 final List<String> accountTypes = [
   "Very High",
   "High",
@@ -134,7 +135,7 @@ class _FitlerActivityModelbottomsheetWidgetState extends State<FitlerActivityMod
           const SizedBox(height: 15,),
           RangeSlider(
 
-            labels:RangeLabels("0", "15"),
+            labels:const RangeLabels("0", "15"),
             values: _selectedRange,
             min: 0,
             max: 60,
@@ -205,6 +206,7 @@ class _FitlerActivityModelbottomsheetWidgetState extends State<FitlerActivityMod
             height: 54,
             child: ElevatedButton(
               onPressed: (){
+                Navigator.pushNamed(context, RouteHelper.activityTrackerPageNine);
               },
               style: ButtonStyle(
                   backgroundColor:

@@ -15,17 +15,12 @@ class ActivityTrackerPageEight extends StatelessWidget {
     maxDate: DateTime.now().add(const Duration(days: 365)),
     onRangeSelected: (firstDate, secondDate) {},
     onDayTapped: (date) {},
-    // readOnly: true,
     onPreviousMinDateTapped: (date) {},
     onAfterMaxDateTapped: (date) {},
     weekdayStart: DateTime.monday,
-    // initialFocusDate: DateTime(2023, 5),
-    // initialDateSelected: DateTime(2022, 3, 15),
-    // endDateSelected: DateTime(2022, 3, 20),
   );
 
   ActivityTrackerPageEight({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

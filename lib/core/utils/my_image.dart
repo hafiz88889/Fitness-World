@@ -106,6 +106,8 @@ class MyImage{
    static String pauseIcon="assets/icons/pauseICon.png";
    static String calenderIcon="assets/icons/calendaricon.png";
    static String filterIcon="assets/icons/fiilterIcon.png";
+   static String runningMan="assets/images/runningman.jpg";
+   static String runningWoman="assets/images/runningwoman.png";
 
 
 }

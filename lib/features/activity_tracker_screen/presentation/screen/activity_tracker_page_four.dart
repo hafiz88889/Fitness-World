@@ -35,7 +35,7 @@ class ActivityTrackerPageFour extends StatelessWidget {
             children: [
               GestureDetector(
                   onTap: (){
-                    Navigator.pushNamed(context, RouteHelper.activityTrackerPageFive);
+                    Navigator.pushNamed(context, RouteHelper.activityPageFive);
                   },
                   child: SvgPicture.asset(MyImage.backGroundFullPlus,height: 60,width: 60,)),
               const SizedBox(height: 30,),

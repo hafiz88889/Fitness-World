@@ -1,3 +1,4 @@
+import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
@@ -17,10 +18,44 @@ class HomePageOne extends StatefulWidget {
   State<HomePageOne> createState() => _HomePageOneState();
 }
 
+final NotchBottomBarController _controller = NotchBottomBarController(index: 0);
+
 class _HomePageOneState extends State<HomePageOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: AnimatedNotchBottomBar(
+          showLabel: true,
+        color: MyColor.whiteColor,
+          notchColor: MyColor.splashBacColor,
+          notchBottomBarController: _controller,
+          bottomBarItems:[
+            BottomBarItem(
+              inActiveItem: SvgPicture.asset(MyImage.homeIcon,colorFilter: ColorFilter.mode(MyColor.grayColor.withAlpha(120), BlendMode.srcIn),height: 25,width: 25,),
+              activeItem:  SvgPicture.asset(MyImage.homeIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 30,width: 30,),
+            ),
+            BottomBarItem(
+              inActiveItem: SvgPicture.asset(MyImage.weightLiftIcon,colorFilter: ColorFilter.mode(MyColor.grayColor.withAlpha(120), BlendMode.srcIn),height: 25,width: 25,),
+              activeItem:  SvgPicture.asset(MyImage.weightLiftIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 30,width: 30,),
+            ),
+            BottomBarItem(
+              inActiveItem: SvgPicture.asset(MyImage.addIcon,colorFilter: ColorFilter.mode(MyColor.grayColor.withAlpha(120), BlendMode.srcIn),height: 25,width: 25,),
+              activeItem:  SvgPicture.asset(MyImage.addIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 30,width: 30,),
+            ),
+            BottomBarItem(
+              inActiveItem: SvgPicture.asset(MyImage.resturentIcon,colorFilter: ColorFilter.mode(MyColor.grayColor.withAlpha(120), BlendMode.srcIn),height: 25,width: 25,),
+              activeItem:  SvgPicture.asset(MyImage.resturentIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 30,width: 30,),
+            ),
+            BottomBarItem(
+                inActiveItem: Image(image: AssetImage(MyImage.userIconTwo),color: MyColor.grayColor.withAlpha(120),height: 25,width: 25,),
+                activeItem: Image(image: AssetImage(MyImage.userIconTwo),color: MyColor.whiteColor,height: 30,width: 30,)),
+
+          ],
+          onTap: (value) {
+
+          },
+          kIconSize: 24, kBottomRadius: 20),
+
       backgroundColor: MyColor.whiteColor,
       body: SingleChildScrollView(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start,

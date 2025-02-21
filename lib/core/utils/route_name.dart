@@ -1,3 +1,10 @@
+import 'package:fitnessworld/api_class/api_practice.dart';
+import 'package:fitnessworld/api_class/api_practice_class_two_post_req.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_page_fifteen.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_eleven.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_fourteen.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_thirteen.dart';
+import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_twelve.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_five.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_four.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_nine.dart';
@@ -60,6 +67,12 @@ import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_six.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_three.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_two.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workot_training_page_six.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workot_training_page_four.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_five.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_one.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_three.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_two.dart';
 import 'package:flutter/material.dart';
 import '../../features/sing_in_sign_up_screen/presentation/screen/password_sent_screen.dart';
 
@@ -127,6 +140,19 @@ class RouteHelper{
   static String activityTrackerPageEight="/ActivityTrackerPageEightSeven";
   static String activityTrackerPageNine="/ActivityTrackerPageNine";
   static String activityTrackerPageTen="/ActivityTrackerPageTen";
+  static String activityScreenPageEleven="/ActivityScreenPageEleven";
+  static String activityScreenPageTwelve="/ActivityScreenPageTwelve";
+  static String activityScreenPageThirteen="/ActivityScreenPageThirteen";
+  static String activityScreenPageFourteen="/ActivityScreenPageFourteen";
+  static String activityPageFifteen="/ActivityPageFifteen";
+  static String apiPractice="/ApiPractice";
+  static String apiPracticeClassTwoPostReq="/ApiPracticeClassTwoPostReq";
+  static String workoutTraningPageOne="/WorkoutTraningPageOne";
+  static String workoutTraningPageTwo="/WorkoutTraningPageTwo";
+  static String workoutTraningPageThree="/WorkoutTraningPageThree";
+  static String workotTrainingPageFour="/WorkotTrainingPageFour";
+  static String workoutTraningPageFive="/WorkoutTraningPageFive";
+  static String workotTrainingPageFive="/WorkotTrainingPageFive";
 
 
 
@@ -199,6 +225,19 @@ return{
   RouteHelper.activityTrackerPageEight:(context)=>   ActivityTrackerPageEight(),
   RouteHelper.activityTrackerPageNine:(context)=>   const ActivityTrackerPageNine(),
   RouteHelper.activityTrackerPageTen:(context)=>   const ActivityTrackerPageTen(),
+  RouteHelper.activityScreenPageEleven:(context)=>   const ActivityScreenPageEleven(),
+  RouteHelper.activityScreenPageTwelve:(context)=>   const ActivityScreenPageTwelve(),
+  RouteHelper.activityScreenPageThirteen:(context)=>   const ActivityScreenPageThirteen(),
+  RouteHelper.activityScreenPageFourteen:(context)=>   const ActivityScreenPageFourteen(),
+  RouteHelper.activityPageFifteen:(context)=>   const ActivityPageFifteen(),
+  RouteHelper.apiPractice:(context)=>   const ApiPractice(),
+  RouteHelper.apiPracticeClassTwoPostReq:(context)=>   const ApiPracticeClassTwoPostReq(),
+  RouteHelper.workoutTraningPageOne:(context)=>   const WorkoutTraningPageOne(),
+  RouteHelper.workoutTraningPageTwo:(context)=>   const  WorkoutTraningPageTwo(),
+  RouteHelper.workoutTraningPageThree:(context)=>    const WorkoutTraningPageThree(),
+  RouteHelper.workotTrainingPageFour:(context)=>    const WorkotTrainingPageFour(),
+  RouteHelper.workoutTraningPageFive:(context)=>    const WorkoutTraningPageFive(),
+  RouteHelper.workotTrainingPageFive:(context)=>    const WorkotTrainingPageSix(),
 
 
 };

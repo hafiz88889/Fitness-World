@@ -74,21 +74,13 @@ class HomeScreenTen extends StatelessWidget {
                     unselectedLabelColor: MyColor.grayColor,
                     tabs: const [
                       Text(
-                        "1d",
-                        style: TextStyle(fontSize: 16),
-                      ),
+                        "1d", style: TextStyle(fontSize: 16)),
                       Text(
-                        "1w",
-                        style: TextStyle(fontSize: 16),
-                      ),
+                        "1w", style: TextStyle(fontSize: 16)),
                       Text(
-                        "1m",
-                        style: TextStyle(fontSize: 16),
-                      ),
+                        "1m", style: TextStyle(fontSize: 16)),
                       Text(
-                        "All",
-                        style: TextStyle(fontSize: 16),
-                      ),
+                        "All", style: TextStyle(fontSize: 16))
                     ],
                   ),
                 ),

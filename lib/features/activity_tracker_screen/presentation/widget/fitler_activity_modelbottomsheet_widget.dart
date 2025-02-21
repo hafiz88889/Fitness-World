@@ -134,7 +134,6 @@ class _FitlerActivityModelbottomsheetWidgetState extends State<FitlerActivityMod
           ),
           const SizedBox(height: 15,),
           RangeSlider(
-
             labels:const RangeLabels("0", "15"),
             values: _selectedRange,
             min: 0,
@@ -148,8 +147,6 @@ class _FitlerActivityModelbottomsheetWidgetState extends State<FitlerActivityMod
               });
             },
           ),
-
-
           Text("Calorie Burn",style: regularTextStyle24,),
           const SizedBox(height: 10,),
           SingleChildScrollView(

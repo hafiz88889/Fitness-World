@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/widget/activity_tracker_page_ten_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -25,11 +26,11 @@ class _ActivityTrackerPageTenState extends State<ActivityTrackerPageTen> {
               Stack(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(top: 30, left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
                     height: 250,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             bottomRight: Radius.circular(30),
                             bottomLeft: Radius.circular(30)),
                         color: MyColor.blackColor),
@@ -44,7 +45,7 @@ class _ActivityTrackerPageTenState extends State<ActivityTrackerPageTen> {
                             Navigator.pop(context);
                           },
                           child: Container(
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: MyColor.whiteColor.withAlpha(150),
@@ -69,7 +70,7 @@ class _ActivityTrackerPageTenState extends State<ActivityTrackerPageTen> {
                         ),
                         Container(
                             height: 60,
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),
                                 color: MyColor.grayColor.withAlpha(150)),
@@ -82,7 +83,7 @@ class _ActivityTrackerPageTenState extends State<ActivityTrackerPageTen> {
                               labelColor: MyColor.whiteColor,
                               unselectedLabelColor:
                                   MyColor.borderColor.withAlpha(100),
-                              tabs: [
+                              tabs: const [
                                 Text(
                                   "Special",
                                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -98,13 +99,18 @@ class _ActivityTrackerPageTenState extends State<ActivityTrackerPageTen> {
               const SizedBox(
                 height: 20,
               ),
-              ActivityTrackerPageTenWidget(
-                image: MyImage.runningMan,
-                icon: MyImage.joggingIcon,
-                iconText: "Jogging",
-                title1: "Morning Boost",
-                time: "30min",
-                calorie: "787kcal",
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, RouteHelper.activityScreenPageEleven);
+                },
+                child: ActivityTrackerPageTenWidget(
+                  image: MyImage.runningMan,
+                  icon: MyImage.joggingIcon,
+                  iconText: "Jogging",
+                  title1: "Morning Boost",
+                  time: "30min",
+                  calorie: "787kcal",
+                ),
               ),
               ActivityTrackerPageTenWidget(
                 image: MyImage.runningWoman,

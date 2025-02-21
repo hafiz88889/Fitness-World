@@ -108,6 +108,19 @@ class MyImage{
    static String filterIcon="assets/icons/fiilterIcon.png";
    static String runningMan="assets/images/runningman.jpg";
    static String runningWoman="assets/images/runningwoman.png";
+   static String energyIcon="assets/icons/energyIcon.png";
+   static String userIconTwo="assets/icons/usericontwo.png";
+   static String blackGymMan="assets/images/blackgymMan.jpg";
+   static String verifyIcon="assets/icons/verify.png";
+   static String blackGymLady="assets/images/blackgymlady.jpg";
+   static String shareIcon="assets/icons/shareicon.png";
+   static String pushUpMan="assets/images/pushupMan.jpg";
+   static String yogaLady="assets/images/yogalady.jpg";
+   static String playIcon="assets/icons/playIcon.png";
+   static String backBodyMan="assets/images/backbodyman.jpg";
+   static String roundMachine="assets/images/round_gym_machine.jpg";
+   static String wifiIcon="assets/icons/wifiicon.png";
+   static String alarmIcon="assets/icons/alarmIcon.png";
 
 
 }

@@ -54,7 +54,5 @@ class _SwitchWidgetState extends State<SwitchWidget> {
         ],
       ),
     );
-
-
   }
 }

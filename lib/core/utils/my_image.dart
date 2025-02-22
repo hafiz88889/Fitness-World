@@ -125,6 +125,8 @@ class MyImage{
    static String gymManThree="assets/images/gymManthree.jpg";
    static String gymManFour="assets/images/gymmanfour.jpg";
    static String blackGymManTwo="assets/images/blackgymmantwo.jpg";
+   static String manFontSide="assets/images/manfontside.jpg";
+   static String manBackSide="assets/images/manbackside.jpg";
 
 
 }

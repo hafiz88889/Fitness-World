@@ -70,6 +70,7 @@ import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_six.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_four.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_ten.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_thirteen.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_eight.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_eleven.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_five.dart';
@@ -165,6 +166,7 @@ class RouteHelper{
   static String workoutTrainingPageTen="/WorkoutTrainingPageTen";
   static String workoutTraningPageEleven="/workoutTraningPageEleven";
   static String workoutTraningPageTwelve="/WorkoutTraningPageTwelve";
+  static String workoutTrainingPageThirteen="/WorkoutTrainingPageThirteen";
 
 
 
@@ -256,6 +258,7 @@ return{
   RouteHelper.workoutTrainingPageTen:(context)=> const WorkoutTrainingPageTen(),
   RouteHelper.workoutTraningPageEleven:(context)=> const WorkoutTraningPageEleven(),
   RouteHelper.workoutTraningPageTwelve:(context)=> const WorkoutTraningPageTwelve(),
+  RouteHelper.workoutTrainingPageThirteen:(context)=> const WorkoutTrainingPageThirteen(),
 
 
 };

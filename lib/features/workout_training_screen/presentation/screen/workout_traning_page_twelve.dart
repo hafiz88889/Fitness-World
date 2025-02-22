@@ -1,4 +1,5 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -174,36 +175,41 @@ class WorkoutTraningPageTwelve extends StatelessWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: itemList.length,
                   itemBuilder: (context, index) {
-                    return Container(
-                      margin: const EdgeInsets.only(bottom: 10),
-                      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: MyColor.borderColor
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: MyColor.whiteColor,
+                    return GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, RouteHelper.workoutTrainingPageThirteen);
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 10),
+                        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: MyColor.borderColor
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: MyColor.whiteColor,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: SvgPicture.asset(itemList[index]["image"],colorFilter: ColorFilter.mode(MyColor.grayColor, BlendMode.srcIn),height: 20,width: 20,),
+                              ),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: SvgPicture.asset(itemList[index]["image"],colorFilter: ColorFilter.mode(MyColor.grayColor, BlendMode.srcIn),height: 20,width: 20,),
-                            ),
-                          ),
-                          const SizedBox(width: 10,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(itemList[index]["text1"],style: regularTextStyle24,),
-                              const SizedBox(height: 8,),
-                              Text(itemList[index]["text2"],style: regularTextStyle18.copyWith(color: MyColor.grayColor,fontSize: 16)),
-                            ],
-                          )
-                        ],
+                            const SizedBox(width: 10,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(itemList[index]["text1"],style: regularTextStyle24,),
+                                const SizedBox(height: 8,),
+                                Text(itemList[index]["text2"],style: regularTextStyle18.copyWith(color: MyColor.grayColor,fontSize: 16)),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },)

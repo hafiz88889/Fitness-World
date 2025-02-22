@@ -67,11 +67,17 @@ import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_six.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_three.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_two.dart';
-import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workot_training_page_six.dart';
-import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workot_training_page_four.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_six.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_four.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_ten.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_eight.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_eleven.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_five.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_nine.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_one.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_seven.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_three.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_twelve.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_two.dart';
 import 'package:flutter/material.dart';
 import '../../features/sing_in_sign_up_screen/presentation/screen/password_sent_screen.dart';
@@ -153,6 +159,12 @@ class RouteHelper{
   static String workotTrainingPageFour="/WorkotTrainingPageFour";
   static String workoutTraningPageFive="/WorkoutTraningPageFive";
   static String workotTrainingPageFive="/WorkotTrainingPageFive";
+  static String wrkoutTraningPageSeven="/WorkoutTraningPageSeven";
+  static String workoutTraningPageEight="/WorkoutTraningPageEight";
+  static String workoutTraningPageNine="/WorkoutTraningPageNine";
+  static String workoutTrainingPageTen="/WorkoutTrainingPageTen";
+  static String workoutTraningPageEleven="/workoutTraningPageEleven";
+  static String workoutTraningPageTwelve="/WorkoutTraningPageTwelve";
 
 
 
@@ -238,6 +250,12 @@ return{
   RouteHelper.workotTrainingPageFour:(context)=>    const WorkotTrainingPageFour(),
   RouteHelper.workoutTraningPageFive:(context)=>    const WorkoutTraningPageFive(),
   RouteHelper.workotTrainingPageFive:(context)=>    const WorkotTrainingPageSix(),
+  RouteHelper.wrkoutTraningPageSeven:(context)=>     const WorkoutTraningPageSeven(),
+  RouteHelper.workoutTraningPageEight:(context)=>     const WorkoutTraningPageEight(),
+  RouteHelper.workoutTraningPageNine:(context)=>     const WorkoutTraningPageNine(),
+  RouteHelper.workoutTrainingPageTen:(context)=> const WorkoutTrainingPageTen(),
+  RouteHelper.workoutTraningPageEleven:(context)=> const WorkoutTraningPageEleven(),
+  RouteHelper.workoutTraningPageTwelve:(context)=> const WorkoutTraningPageTwelve(),
 
 
 };

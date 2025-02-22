@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Fitness World",
-      initialRoute: RouteHelper.apiPracticeClassTwoPostReq,
+      initialRoute: RouteHelper.workoutTrainingPageTen,
       routes: RouteHelper.getRoute(),
     );
   }

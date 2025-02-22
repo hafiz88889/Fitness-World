@@ -262,7 +262,7 @@ class _WorkotTrainingPageSixState extends State<WorkotTrainingPageSix> {
                                         child: Container(
                                           height: 30,
                                           width: 30,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(12),
@@ -292,7 +292,7 @@ class _WorkotTrainingPageSixState extends State<WorkotTrainingPageSix> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Container(
-                                        padding: EdgeInsets.symmetric(
+                                        padding: const EdgeInsets.symmetric(
                                             horizontal: 10, vertical: 5),
                                         decoration: BoxDecoration(
                                           borderRadius:
@@ -356,7 +356,7 @@ class _WorkotTrainingPageSixState extends State<WorkotTrainingPageSix> {
           height: 54,
           child: ElevatedButton(
             onPressed: (){
-             // Navigator.pushNamed(context, RouteHelper.workotTrainingPageFour);
+            Navigator.pushNamed(context, RouteHelper.wrkoutTraningPageSeven);
             },
             style: ButtonStyle(
                 backgroundColor:

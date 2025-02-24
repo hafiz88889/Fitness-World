@@ -1,5 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_ten.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/widget/workout_thirteen_page_tabbarviewOne.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,8 +14,7 @@ class WorkoutTrainingPageThirteen extends StatefulWidget {
   @override
   State<WorkoutTrainingPageThirteen> createState() => _WorkoutTrainingPageThirteenState();
 }
-bool isSelect=false;
-bool isSelectTwo=false;
+
 class _WorkoutTrainingPageThirteenState extends State<WorkoutTrainingPageThirteen> {
   @override
   Widget build(BuildContext context) {
@@ -66,25 +67,30 @@ class _WorkoutTrainingPageThirteenState extends State<WorkoutTrainingPageThirtee
                     const SizedBox(
                       height: 30,
                     ),
-                    Container(
-                      width: 120,
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: MyColor.splashBacColorTwo),
-                      child: Row(
-                        children: [
-                          SvgPicture.asset(
-                            MyImage.weightLiftIcon,
-                            height: 25,
-                            width: 25,
-                          ),
-                          Text(
-                            "Mindset",
-                            style: regularTextStyle18.copyWith(
-                                color: MyColor.whiteColor),
-                          )
-                        ],
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, RouteHelper.workoutTrainingPageFourteen);
+                      },
+                      child: Container(
+                        width: 120,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: MyColor.splashBacColorTwo),
+                        child: Row(
+                          children: [
+                            SvgPicture.asset(
+                              MyImage.weightLiftIcon,
+                              height: 25,
+                              width: 25,
+                            ),
+                            Text(
+                              "Mindset",
+                              style: regularTextStyle18.copyWith(
+                                  color: MyColor.whiteColor),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -165,73 +171,10 @@ class _WorkoutTrainingPageThirteenState extends State<WorkoutTrainingPageThirtee
                  ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height,
-                    child: TabBarView(
+                    child: const TabBarView(
                       children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: 20,),
-                          Text("Why correct my fitness form?",style: regularTextStyle24,),
-                          const SizedBox(height: 8,),
-                          Text("Achieve maximum results and prevent injuries by mastering the art of proper exercise from Pur AI is here to guide you ensuring each movement is precise and effective.",textAlign:TextAlign.start,style: regularTextStyle18.copyWith(color: MyColor.grayColor,fontSize: 14),),
-                          const SizedBox(height: 10,),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  height:200,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                      image: DecorationImage(image: AssetImage(MyImage.manFontSide),fit: BoxFit.cover)
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Checkbox(
-                                          activeColor: MyColor.splashBacColor,
-                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                                          value: isSelectTwo, onChanged: (value){
-                                        setState(() {
-                                          isSelectTwo=value!;
-                                        });
-                                      }),
-                                      Text("Front",style: regularTextStyle24,)
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(width: 10,),
-                              Expanded(
-                                child: Container(
-                                  height:200,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      image: DecorationImage(image: AssetImage(MyImage.manBackSide),fit: BoxFit.cover)
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Checkbox(
-                                          activeColor: MyColor.splashBacColor,
-                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                                          value: isSelect, onChanged: (value){
-                                        setState(() {
-                                          isSelect=value!;
-                                        });
-                                      }),
-                                      Text("Back",style: regularTextStyle24,)
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                        const Text("Settings Screen", style: TextStyle(fontSize: 24)),
+                        WorkoutThirteenPageTabbarviewone(),
+                        Text("Direction Page", style: TextStyle(fontSize: 24) ),
                       ],
                     ),
                   ),

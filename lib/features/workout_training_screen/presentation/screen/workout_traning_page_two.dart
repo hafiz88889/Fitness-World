@@ -8,7 +8,6 @@ import 'package:fitnessworld/features/workout_training_screen/presentation/widge
 import 'package:fitnessworld/features/workout_training_screen/presentation/widget/workouts_row_one.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class WorkoutTraningPageTwo extends StatefulWidget {
   const WorkoutTraningPageTwo({super.key});

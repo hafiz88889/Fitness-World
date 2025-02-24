@@ -34,7 +34,7 @@ final List<String> supplements = [
   "Creatine",
   "Creatine 2"
 ];
-final List<String> selectedSupplements = ["BCAAs", "Omega-3"];
+final List<String> selectedSupplements = ["BCAAs", "Omega 2"];
 
 class _ScreenTwelveState extends State<ScreenTwelve> {
   @override

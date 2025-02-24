@@ -61,12 +61,19 @@ import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_s
 import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_screen_one.dart';
 import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_screen_three.dart';
 import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_screen_two.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_four.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_three.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_two.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/vitural_fitness_page_five.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/vitural_fitness_page_one.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_five.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_four.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_one.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_six.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_three.dart';
 import 'package:fitnessworld/features/welcome_screen/presentation/screen/welcome_screen_two.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_fifteen.dart';
+import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_fourteen.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_six.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_four.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_training_page_ten.dart';
@@ -167,6 +174,13 @@ class RouteHelper{
   static String workoutTraningPageEleven="/workoutTraningPageEleven";
   static String workoutTraningPageTwelve="/WorkoutTraningPageTwelve";
   static String workoutTrainingPageThirteen="/WorkoutTrainingPageThirteen";
+  static String workoutTrainingPageFourteen="/WorkoutTrainingPageFourteen";
+  static String workoutTrainingPageFifteen="/WorkoutTrainingPageFifteen";
+  static String virtualFitnessPageOne="/VirtualFitnessPageOne";
+  static String virtualFitnessPageTwo="/VirtualFitnessPageTwo";
+  static String virtualFitnessPageThree="/VirtualFitnessPageThree";
+  static String virtualFitnessPageFour="/VirtualFitnessPageFour";
+  static String virtualFitnessPageFive="/VirtualFitnessPageFive";
 
 
 
@@ -259,6 +273,13 @@ return{
   RouteHelper.workoutTraningPageEleven:(context)=> const WorkoutTraningPageEleven(),
   RouteHelper.workoutTraningPageTwelve:(context)=> const WorkoutTraningPageTwelve(),
   RouteHelper.workoutTrainingPageThirteen:(context)=> const WorkoutTrainingPageThirteen(),
+  RouteHelper.workoutTrainingPageFourteen:(context)=> const WorkoutTrainingPageFourteen(),
+  RouteHelper.workoutTrainingPageFifteen:(context)=> const WorkoutTrainingPageFifteen(),
+  RouteHelper.virtualFitnessPageOne:(context)=> const VirtualFitnessPageOne(),
+  RouteHelper.virtualFitnessPageTwo:(context)=> const VirtualFitnessPageTwo(),
+  RouteHelper.virtualFitnessPageThree:(context)=> const VirtualFitnessPageThree(),
+  RouteHelper.virtualFitnessPageFour:(context)=> const VirtualFitnessPageFour(),
+  RouteHelper.virtualFitnessPageFive:(context)=> const VirtualFitnessPageFive(),
 
 
 };

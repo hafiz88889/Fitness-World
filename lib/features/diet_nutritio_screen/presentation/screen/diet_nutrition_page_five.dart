@@ -1,4 +1,5 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/widget/page_five_tabbar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -112,7 +113,7 @@ class _DietNutritionPageFiveState extends State<DietNutritionPageFive> {
                 height: 54,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navigator.pushNamed(context, RouteHelper.virtualFitnessPageTwentyOne);
+                    Navigator.pushNamed(context, RouteHelper.dietNutritionPageSix);
                   },
                   style: ButtonStyle(
                       backgroundColor:

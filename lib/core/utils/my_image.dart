@@ -143,6 +143,9 @@ class MyImage{
    static String plateImageTwo="assets/images/plateImagetwo.JPG";
    static String plateImageThree="assets/images/plateImagethree.jpg";
    static String plateImageFour="assets/images/plateImagefour.jpg";
+   static String orangeImage="assets/images/orange.png";
+   static String orangeImageTwo="assets/images/orangeTwo.jpg";
+   static String plateImageFive="assets/images/plateImagefive.jpg";
 
 
 }

@@ -31,8 +31,13 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_eight.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_five.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_four.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_nine.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_seven.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_six.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_ten.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_three.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrititio_page_one.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/nutrition_diet_page_two.dart';
@@ -212,6 +217,11 @@ class RouteHelper{
   static String dietNutritionPageThree="/DietNutritionPageThree";
   static String dietNutritionPageFour="/DietNutritionPageFour";
   static String dietNutritionPageFive="/DietNutritionPageFive";
+  static String dietNutritionPageSix="/DietNutritionPageSix";
+  static String dietNutritionPageSeven="/DietNutritionPageSeven";
+  static String dietNutritionPageEight="/DietNutritionPageEight";
+  static String dietNutritionPageNine="/DietNutritionPageNine";
+  static String dietNutritionPageTen="/DietNutritionPageTen";
 
 
 
@@ -325,6 +335,11 @@ return{
   RouteHelper.dietNutritionPageThree:(context)=> const DietNutritionPageThree(),
   RouteHelper.dietNutritionPageFour:(context)=> const DietNutritionPageFour(),
   RouteHelper.dietNutritionPageFive:(context)=> const DietNutritionPageFive(),
+  RouteHelper.dietNutritionPageSix:(context)=> const DietNutritionPageSix(),
+  RouteHelper.dietNutritionPageSeven:(context)=> const DietNutritionPageSeven(),
+  RouteHelper.dietNutritionPageEight:(context)=> const DietNutritionPageEight(),
+  RouteHelper.dietNutritionPageNine:(context)=> const DietNutritionPageNine(),
+  RouteHelper.dietNutritionPageTen:(context)=> const DietNutritionPageTen(),
 
 
 };

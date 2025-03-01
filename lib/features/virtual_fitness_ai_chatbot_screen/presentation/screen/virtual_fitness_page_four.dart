@@ -96,7 +96,7 @@ class _VirtualFitnessPageFourState extends State<VirtualFitnessPageFour> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -183,7 +183,7 @@ class _VirtualFitnessPageFourState extends State<VirtualFitnessPageFour> {
                         final isSelected =
                             selectedSupplements.contains(supplement);
                         return ChoiceChip(
-                          labelPadding: EdgeInsets.all(8),
+                          labelPadding: const EdgeInsets.all(8),
                           showCheckmark: false,
                           padding: EdgeInsets.zero,
                           label: SizedBox(

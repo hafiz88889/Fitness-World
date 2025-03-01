@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
@@ -10,6 +12,7 @@ import 'package:fitnessworld/features/home_screen/presentation/widget/virtual_ai
 import 'package:fitnessworld/features/home_screen/presentation/widget/work_out_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:http/http.dart'as http;
 
 class HomePageOne extends StatefulWidget {
   const HomePageOne({super.key});
@@ -378,4 +381,13 @@ class _HomePageOneState extends State<HomePageOne> {
       ),
     );
   }
+dynamic postList=[];
+void getPostData()async{
+    Uri url=Uri.parse("https://fakestoreapi.com/products");
+    final apiResponse=await http.get(url);
+    setState(() {
+      postList=jsonDecode(apiResponse.body);
+    });
+}
+
 }

@@ -23,78 +23,74 @@ class _ActivityTrackerPageTenState extends State<ActivityTrackerPageTen> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
-                    height: 250,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.only(
-                            bottomRight: Radius.circular(30),
-                            bottomLeft: Radius.circular(30)),
-                        color: MyColor.blackColor),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: MyColor.whiteColor.withAlpha(150),
-                            ),
-                            child: SvgPicture.asset(
-                              MyImage.backIcon,
-                              colorFilter: ColorFilter.mode(
-                                  MyColor.whiteColor, BlendMode.srcIn),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "AI Suggestions",
-                          style: regularTextStyle24.copyWith(
-                              color: MyColor.whiteColor, fontSize: 30),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Container(
-                            height: 60,
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: MyColor.grayColor.withAlpha(150)),
-                            child: TabBar(
-                              indicatorSize: TabBarIndicatorSize.tab,
-                              dividerColor: Colors.transparent,
-                              indicator: BoxDecoration(
-                                  color: MyColor.grayColor,
-                                  borderRadius: BorderRadius.circular(25)),
-                              labelColor: MyColor.whiteColor,
-                              unselectedLabelColor:
-                                  MyColor.borderColor.withAlpha(100),
-                              tabs: const [
-                                Text(
-                                  "Special",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Text("All"),
-                              ],
-                            )),
-                      ],
+              Container(
+                padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
+                height: 250,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(
+                        bottomRight: Radius.circular(30),
+                        bottomLeft: Radius.circular(30)),
+                    color: MyColor.blackColor),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 20,
                     ),
-                  )
-                ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: MyColor.whiteColor.withAlpha(150),
+                        ),
+                        child: SvgPicture.asset(
+                          MyImage.backIcon,
+                          colorFilter: ColorFilter.mode(
+                              MyColor.whiteColor, BlendMode.srcIn),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "AI Suggestions",
+                      style: regularTextStyle24.copyWith(
+                          color: MyColor.whiteColor, fontSize: 30),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                        height: 60,
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: MyColor.grayColor.withAlpha(150)),
+                        child: TabBar(
+                          indicatorSize: TabBarIndicatorSize.tab,
+                          dividerColor: Colors.transparent,
+                          indicator: BoxDecoration(
+                              color: MyColor.grayColor,
+                              borderRadius: BorderRadius.circular(25)),
+                          labelColor: MyColor.whiteColor,
+                          unselectedLabelColor:
+                              MyColor.borderColor.withAlpha(100),
+                          tabs: const [
+                            Text(
+                              "Special",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text("All"),
+                          ],
+                        )),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 20,

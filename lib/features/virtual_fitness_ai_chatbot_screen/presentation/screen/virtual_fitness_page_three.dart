@@ -58,7 +58,7 @@ class VirtualFitnessPageThree extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(20),
-              height: 250,
+              height: 180,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: MyColor.blackColor,

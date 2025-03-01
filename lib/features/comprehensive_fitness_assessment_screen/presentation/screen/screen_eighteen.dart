@@ -55,7 +55,7 @@ class _ScreenEighteenState extends State<ScreenEighteen> {
                   borderRadius: BorderRadius.circular(15),
                   color: MyColor.splashBacColorTwo.withAlpha(30)),
               child: Text(
-                "17 of 18",
+                "17 of 17",
                 style: regularTextStyle24.copyWith(
                     color: MyColor.splashBacColorTwo, fontSize: 14),
               ),

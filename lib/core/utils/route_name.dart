@@ -1,5 +1,3 @@
-import 'package:fitnessworld/api_class/api_practice.dart';
-import 'package:fitnessworld/api_class/api_practice_class_two_post_req.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_page_fifteen.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_eleven.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_fourteen.dart';
@@ -33,6 +31,11 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_three.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_five.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_four.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_three.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrititio_page_one.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/nutrition_diet_page_two.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_four.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_one.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_eight.dart';
@@ -61,8 +64,19 @@ import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_s
 import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_screen_one.dart';
 import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_screen_three.dart';
 import 'package:fitnessworld/features/splash_screen/presentation/screen/splash_screen_two.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_eleven.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_fifteen.dart';
 import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_four.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_fourteen.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_seven.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_six.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_thirteen.dart';
 import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_three.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_twelve.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_twenty.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_twentyThree.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_twenty_one.dart';
+import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_twenty_two.dart';
 import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/virtual_fitness_page_two.dart';
 import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/vitural_fitness_page_five.dart';
 import 'package:fitnessworld/features/virtual_fitness_ai_chatbot_screen/presentation/screen/vitural_fitness_page_one.dart';
@@ -160,6 +174,7 @@ class RouteHelper{
   static String activityScreenPageFourteen="/ActivityScreenPageFourteen";
   static String activityPageFifteen="/ActivityPageFifteen";
   static String apiPractice="/ApiPractice";
+  static String apiPracticeone="/ApiPracticeone";
   static String apiPracticeClassTwoPostReq="/ApiPracticeClassTwoPostReq";
   static String workoutTraningPageOne="/WorkoutTraningPageOne";
   static String workoutTraningPageTwo="/WorkoutTraningPageTwo";
@@ -181,6 +196,22 @@ class RouteHelper{
   static String virtualFitnessPageThree="/VirtualFitnessPageThree";
   static String virtualFitnessPageFour="/VirtualFitnessPageFour";
   static String virtualFitnessPageFive="/VirtualFitnessPageFive";
+  static String virtualFitnessPageSix="/VirtualFitnessPageSix";
+  static String virtualFitnessPageSeven="/VirtualFitnessPageSeven";
+  static String virtualFitnessPageEleven="/VirtualFitnessPageEleven";
+  static String virtualFitnessPageTwelve="/VirtualFitnessPageTwelve";
+  static String virtualFitnessPageThirteen="/VirtualFitnessPageThirteen";
+  static String virtualFitnessPageFourteen="/VirtualFitnessPageFourteen";
+  static String virtualFitnessPageFifteen="/VirtualFitnessPageFifteen";
+  static String virtualFitnessPageTwenty="/VirtualFitnessPageTwenty";
+  static String virtualFitnessPageTwentyOne="/VirtualFitnessPageTwentyOne";
+  static String virtualFitnessPageTwentyTwo="/VirtualFitnessPageTwentyTwo";
+  static String virtualFitnessPageTwentythree="/VirtualFitnessPageTwentythree";
+  static String dietNutritititioPageOne="/DietNutritititioPageOne";
+  static String nutritionDietPageTwo="/NutritionDietPageTwo";
+  static String dietNutritionPageThree="/DietNutritionPageThree";
+  static String dietNutritionPageFour="/DietNutritionPageFour";
+  static String dietNutritionPageFive="/DietNutritionPageFive";
 
 
 
@@ -258,8 +289,6 @@ return{
   RouteHelper.activityScreenPageThirteen:(context)=>   const ActivityScreenPageThirteen(),
   RouteHelper.activityScreenPageFourteen:(context)=>   const ActivityScreenPageFourteen(),
   RouteHelper.activityPageFifteen:(context)=>   const ActivityPageFifteen(),
-  RouteHelper.apiPractice:(context)=>   const ApiPractice(),
-  RouteHelper.apiPracticeClassTwoPostReq:(context)=>   const ApiPracticeClassTwoPostReq(),
   RouteHelper.workoutTraningPageOne:(context)=>   const WorkoutTraningPageOne(),
   RouteHelper.workoutTraningPageTwo:(context)=>   const  WorkoutTraningPageTwo(),
   RouteHelper.workoutTraningPageThree:(context)=>    const WorkoutTraningPageThree(),
@@ -280,6 +309,22 @@ return{
   RouteHelper.virtualFitnessPageThree:(context)=> const VirtualFitnessPageThree(),
   RouteHelper.virtualFitnessPageFour:(context)=> const VirtualFitnessPageFour(),
   RouteHelper.virtualFitnessPageFive:(context)=> const VirtualFitnessPageFive(),
+  RouteHelper.virtualFitnessPageSix:(context)=> const VirtualFitnessPageSix(),
+  RouteHelper.virtualFitnessPageSeven:(context)=> const VirtualFitnessPageSeven(),
+  RouteHelper.virtualFitnessPageEleven:(context)=> const VirtualFitnessPageEleven(),
+  RouteHelper.virtualFitnessPageTwelve:(context)=> const VirtualFitnessPageTwelve(),
+  RouteHelper.virtualFitnessPageThirteen:(context)=> const VirtualFitnessPageThirteen(),
+  RouteHelper.virtualFitnessPageFourteen:(context)=> const VirtualFitnessPageFourteen(),
+  RouteHelper.virtualFitnessPageFifteen:(context)=> const VirtualFitnessPageFifteen(),
+  RouteHelper.virtualFitnessPageTwenty:(context)=> const VirtualFitnessPageTwenty(),
+  RouteHelper.virtualFitnessPageTwentyOne:(context)=> const VirtualFitnessPageTwentyOne(),
+  RouteHelper.virtualFitnessPageTwentyTwo:(context)=> const VirtualFitnessPageTwentyTwo(),
+  RouteHelper.virtualFitnessPageTwentythree:(context)=> const VirtualFitnessPageTwentythree(),
+  RouteHelper.dietNutritititioPageOne:(context)=> const DietNutritititioPageOne(),
+  RouteHelper.nutritionDietPageTwo:(context)=> const NutritionDietPageTwo(),
+  RouteHelper.dietNutritionPageThree:(context)=> const DietNutritionPageThree(),
+  RouteHelper.dietNutritionPageFour:(context)=> const DietNutritionPageFour(),
+  RouteHelper.dietNutritionPageFive:(context)=> const DietNutritionPageFive(),
 
 
 };

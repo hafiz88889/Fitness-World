@@ -109,7 +109,7 @@ class _WorkoutTraningPageEightState extends State<WorkoutTraningPageEight> {
                   height: 20,
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
+                  margin: const EdgeInsets.symmetric(vertical: 10),
                   padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),

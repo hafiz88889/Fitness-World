@@ -133,6 +133,16 @@ class MyImage{
    static String robotImageTwo="assets/images/robotImageTwo.jpg";
    static String dumbleImage="assets/images/dambleImage.jpg";
    static String robotImageThree="assets/images/robotimagethree.jpg";
+   static String gymManImageSix="assets/images/gymmansix.jpg";
+   static String deleteIcon="assets/icons/deleteIcon.png";
+   static String gymMachineOne="assets/images/gymmachineone.jpg";
+   static String dumm="assets/images/dumm.jpg";
+   static String star="assets/icons/star.png";
+   static String gymManSeven="assets/images/gymmanseven.jpg";
+   static String vejitableImage="assets/images/vejitableImage.jpg";
+   static String plateImageTwo="assets/images/plateImagetwo.JPG";
+   static String plateImageThree="assets/images/plateImagethree.jpg";
+   static String plateImageFour="assets/images/plateImagefour.jpg";
 
 
 }

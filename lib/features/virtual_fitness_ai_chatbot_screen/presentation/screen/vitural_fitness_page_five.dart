@@ -35,7 +35,7 @@ class VirtualFitnessPageFive extends StatelessWidget {
             children: [
              GestureDetector(
                  onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Basic()));
+                  Navigator.pushNamed(context, RouteHelper.virtualFitnessPageSix);
                  },
                  child: SvgPicture.asset(MyImage.backGroundFullPlus,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 50,width: 50,)),
               const SizedBox(height: 20,),

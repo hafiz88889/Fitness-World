@@ -12,5 +12,6 @@ class MyColor{
   static Color elevetedBackColor =const Color(0xffFFEDD5);
   static Color greenColor =const Color(0xff82CD18);
   static Color orangeColor =const Color(0xffEA580B);
+  static Color normalRedColor =const Color(0xffFEE2E1);
 
 }

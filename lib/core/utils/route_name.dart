@@ -32,6 +32,7 @@ import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/pr
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_twelve.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_two.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_eight.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_eleven.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_five.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_four.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_nine.dart';
@@ -39,6 +40,7 @@ import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/d
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_six.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_ten.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_three.dart';
+import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_twelve.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrititio_page_one.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/nutrition_diet_page_two.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_four.dart';
@@ -53,6 +55,9 @@ import 'package:fitnessworld/features/home_screen/presentation/screen/home_scree
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_three.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_twelve.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_one.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_three.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_two.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_eight.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_five.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_four.dart';
@@ -222,6 +227,11 @@ class RouteHelper{
   static String dietNutritionPageEight="/DietNutritionPageEight";
   static String dietNutritionPageNine="/DietNutritionPageNine";
   static String dietNutritionPageTen="/DietNutritionPageTen";
+  static String dietNutritionPageEleven="/DietNutritionPageEleven";
+  static String dietNutritionPageTwelve="/DietNutritionPageTwelve";
+  static String personalizePageOne="/PersonalizePageOne";
+  static String personalizePageTwo="/PersonalizePageTwo";
+  static String personalizePageThree="/PersonalizePageThree";
 
 
 
@@ -340,6 +350,11 @@ return{
   RouteHelper.dietNutritionPageEight:(context)=> const DietNutritionPageEight(),
   RouteHelper.dietNutritionPageNine:(context)=> const DietNutritionPageNine(),
   RouteHelper.dietNutritionPageTen:(context)=> const DietNutritionPageTen(),
+  RouteHelper.dietNutritionPageEleven:(context)=> const DietNutritionPageEleven(),
+  RouteHelper.dietNutritionPageTwelve:(context)=> const DietNutritionPageTwelve(),
+  RouteHelper.personalizePageOne:(context)=> const PersonalizePageOne(),
+  RouteHelper.personalizePageTwo:(context)=> const PersonalizePageTwo(),
+  RouteHelper.personalizePageThree:(context)=> const PersonalizePageThree(),
 
 
 };

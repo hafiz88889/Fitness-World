@@ -146,6 +146,11 @@ class MyImage{
    static String orangeImage="assets/images/orange.png";
    static String orangeImageTwo="assets/images/orangeTwo.jpg";
    static String plateImageFive="assets/images/plateImagefive.jpg";
+   static String plateImageSix="assets/images/plateImagesix.jpg";
+   static String plateImageSeven="assets/images/plateImageseven.jpg";
+   static String basketBall="assets/images/basketball.png";
+   static String robotImageFour="assets/images/robotimagefour.jpg";
+   static String ladyImageOne="assets/images/ladyImageOne.png";
 
 
 }

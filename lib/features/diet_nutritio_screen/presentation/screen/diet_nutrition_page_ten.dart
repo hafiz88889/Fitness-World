@@ -1,5 +1,6 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -69,7 +70,7 @@ class DietNutritionPageTen extends StatelessWidget {
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                 // Navigator.pushNamed(context, RouteHelper.dietNutritionPageTen);
+                  Navigator.pushNamed(context, RouteHelper.dietNutritionPageEleven);
                 },
                 style: ButtonStyle(
                     backgroundColor:

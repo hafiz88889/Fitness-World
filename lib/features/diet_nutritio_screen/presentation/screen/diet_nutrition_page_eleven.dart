@@ -283,8 +283,7 @@ class _DietNutritionPageElevenState extends State<DietNutritionPageEleven> {
                   ),
                   InstructionProcessWidget(
                     title1: "Prep Veggies",
-                    title2:
-                        "Dice tomatoes chop cucumber and slice radishes finely set aside",
+                    title2: "Dice tomatoes chop cucumber and slice radishes finely set aside",
                     orangeColor: MyColor.splashBacColor,
                     whiteColor: MyColor.whiteColor,
                     lineColor: MyColor.splashBacColor,
@@ -313,8 +312,7 @@ class _DietNutritionPageElevenState extends State<DietNutritionPageEleven> {
                   ),
                   InstructionProcessWidget(
                     title1: "Serve & Enjoy",
-                    title2:
-                        "Plate vibrant North Texas Salad and savor the delightful combination of flavors",
+                    title2: "Plate vibrant North Texas Salad and savor the delightful combination of flavors",
                     orangeColor: MyColor.grayColor,
                     whiteColor: MyColor.splashBacColor.withAlpha(50),
                     lineColor: MyColor.grayColor,

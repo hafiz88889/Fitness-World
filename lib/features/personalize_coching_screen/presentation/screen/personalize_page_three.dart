@@ -1,6 +1,7 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/widget/tabbar_view_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -49,13 +50,18 @@ class PersonalizePageThree extends StatelessWidget {
                       title2: "AI",
                       title3: "4.5",
                       title4: "21 Client"),
-                  TabbarViewWidget(
-                      image: MyImage.ladyImageOne,
-                      title1: "Fairness Vndymion",
-                      logo: MyImage.settingIcn,
-                      title2: "Human",
-                      title3: "3.5",
-                      title4: "87 Client"),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteHelper.personalizePageFour);
+                    },
+                    child: TabbarViewWidget(
+                        image: MyImage.ladyImageOne,
+                        title1: "Fairness Vndymion",
+                        logo: MyImage.settingIcn,
+                        title2: "Human",
+                        title3: "3.5",
+                        title4: "87 Client"),
+                  ),
                 ]),
               )
             ],

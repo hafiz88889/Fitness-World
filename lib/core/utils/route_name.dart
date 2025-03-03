@@ -55,7 +55,10 @@ import 'package:fitnessworld/features/home_screen/presentation/screen/home_scree
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_three.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_twelve.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_five.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_four.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_one.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_six.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_three.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_two.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_eight.dart';
@@ -232,6 +235,9 @@ class RouteHelper{
   static String personalizePageOne="/PersonalizePageOne";
   static String personalizePageTwo="/PersonalizePageTwo";
   static String personalizePageThree="/PersonalizePageThree";
+  static String personalizePageFour="/PersonalizePageFour";
+  static String personalizePageFive="/PersonalizePageFive";
+  static String personalizePageSix="/PersonalizePageSix";
 
 
 
@@ -355,6 +361,9 @@ return{
   RouteHelper.personalizePageOne:(context)=> const PersonalizePageOne(),
   RouteHelper.personalizePageTwo:(context)=> const PersonalizePageTwo(),
   RouteHelper.personalizePageThree:(context)=> const PersonalizePageThree(),
+  RouteHelper.personalizePageFour:(context)=> const PersonalizePageFour(),
+  RouteHelper.personalizePageFive:(context)=> const PersonalizePageFive(),
+  RouteHelper.personalizePageSix:(context)=> const PersonalizePageSix(),
 
 
 };

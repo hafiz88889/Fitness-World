@@ -47,9 +47,9 @@ class _WorkoutTrainingPageTenState extends State<WorkoutTrainingPageTen> {
             Container(
               height: 230,
               width: double.infinity,
-              padding: EdgeInsets.only(top: 40,left:15,bottom: 5),
+              padding: const EdgeInsets.only(top: 40,left:15,bottom: 5),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35),bottomRight: Radius.circular(35)),
+                borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(35),bottomRight: Radius.circular(35)),
                 color: MyColor.splashBacColor
               ),
               child: Column(
@@ -91,10 +91,10 @@ class _WorkoutTrainingPageTenState extends State<WorkoutTrainingPageTen> {
                             });
                           },
                           child:  Container(
-                            margin: EdgeInsets.only(right: 10,top: 10,bottom: 5),
+                            margin: const EdgeInsets.only(right: 10,top: 10,bottom: 5),
                             width: 60,
                             height: 75,
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: isSelect?MyColor.whiteColor:MyColor.orangeColor,
@@ -125,7 +125,7 @@ class _WorkoutTrainingPageTenState extends State<WorkoutTrainingPageTen> {
               ),
             ),
             const SizedBox(height: 20,),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 15),
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
                 Row(
@@ -138,14 +138,14 @@ class _WorkoutTrainingPageTenState extends State<WorkoutTrainingPageTen> {
                   ],
                 ),
                 ListView.builder(
-                  physics:NeverScrollableScrollPhysics(),
+                  physics:const NeverScrollableScrollPhysics(),
                   itemCount: itemList.length,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: MyColor.borderColor
@@ -164,8 +164,8 @@ class _WorkoutTrainingPageTenState extends State<WorkoutTrainingPageTen> {
                                 Navigator.pushNamed(context, RouteHelper.workoutTraningPageEleven);
                               },
                               child: Container(
-                                margin:EdgeInsets.only(bottom:15),
-                                padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                                margin:const EdgeInsets.only(bottom:15),
+                                padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(25),
                                     color: MyColor.borderColor
@@ -175,7 +175,7 @@ class _WorkoutTrainingPageTenState extends State<WorkoutTrainingPageTen> {
                                     Container(
                                       height: 70,
                                       width: 70,
-                                      padding: EdgeInsets.all(20),
+                                      padding: const EdgeInsets.all(20),
                                       decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(20),
                                           color: MyColor.whiteColor

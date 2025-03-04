@@ -19,10 +19,10 @@ class PersonalizePageSix extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              padding: EdgeInsets.only(top: 40,left: 20,right: 20),
+              padding: const EdgeInsets.only(top: 40,left: 20,right: 20),
               height: 200,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(bottom: Radius.circular(45),),
+                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(45),),
                 color: MyColor.blackColor
               ),
               child: Column(
@@ -78,7 +78,8 @@ class PersonalizePageSix extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15,),
-            const Expanded(child: TabBarView(
+            const Expanded(
+                child: TabBarView(
                 children: [
               BrowseTabbarViewWidget(),
               BrowseTabbarViewWidget(),

@@ -1,3 +1,4 @@
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/widget/page_six_bottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -53,7 +54,7 @@ class BrowseTabbarViewWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 5,vertical: 3),
+                      padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 3),
                       decoration:BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: MyColor.grayColor.withAlpha(50)
@@ -77,9 +78,22 @@ class BrowseTabbarViewWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              Transform.rotate(
-                  angle: -3,
-                  child: SvgPicture.asset(MyImage.backIcon,height: 25,))
+              GestureDetector(
+                onTap: (){
+                  showModalBottomSheet(
+                    barrierColor: MyColor.grayColor,
+                      isScrollControlled: true,
+                      context: context, builder: (BuildContext context){
+                    return FractionallySizedBox(
+                      heightFactor: 0.75,
+                      child: PersonalizePageSeven(),
+                    );
+                  });
+                },
+                child: Transform.rotate(
+                    angle: -3,
+                    child: SvgPicture.asset(MyImage.backIcon,height: 25,)),
+              )
             ],
           ),
         );

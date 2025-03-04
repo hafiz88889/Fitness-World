@@ -151,6 +151,7 @@ class MyImage{
    static String basketBall="assets/images/basketball.png";
    static String robotImageFour="assets/images/robotimagefour.jpg";
    static String ladyImageOne="assets/images/ladyImageOne.png";
+   static String dotIcon="assets/icons/dot.png";
 
 
 }

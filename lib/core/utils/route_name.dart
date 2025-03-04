@@ -55,9 +55,11 @@ import 'package:fitnessworld/features/home_screen/presentation/screen/home_scree
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_three.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_twelve.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eight.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_five.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_four.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_one.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_seven.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_six.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_three.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_two.dart';
@@ -238,6 +240,8 @@ class RouteHelper{
   static String personalizePageFour="/PersonalizePageFour";
   static String personalizePageFive="/PersonalizePageFive";
   static String personalizePageSix="/PersonalizePageSix";
+  static String personalizePageSeven="/PersonalizePageSeven";
+  static String personalizePageEight="/PersonalizePageEight";
 
 
 
@@ -364,6 +368,8 @@ return{
   RouteHelper.personalizePageFour:(context)=> const PersonalizePageFour(),
   RouteHelper.personalizePageFive:(context)=> const PersonalizePageFive(),
   RouteHelper.personalizePageSix:(context)=> const PersonalizePageSix(),
+  RouteHelper.personalizePageSeven:(context)=> const PersonalizePageSeven(),
+  RouteHelper.personalizePageEight:(context)=> const PersonalizePageEight(),
 
 
 };

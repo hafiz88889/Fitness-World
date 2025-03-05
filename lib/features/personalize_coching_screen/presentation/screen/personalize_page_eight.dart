@@ -1,4 +1,5 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
@@ -14,6 +15,20 @@ class PersonalizePageEight extends StatefulWidget {
   @override
   State<PersonalizePageEight> createState() => _PersonalizePageEightState();
 }
+List<String> timeList=[
+  "08:00",
+  "09:00",
+  "10:00",
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+];
 final calendarController = CleanCalendarController(
   minDate: DateTime.now(),
   maxDate: DateTime.now().add(const Duration(days: 365)),
@@ -23,13 +38,14 @@ final calendarController = CleanCalendarController(
   onAfterMaxDateTapped: (date) {},
   weekdayStart: DateTime.monday,
 );
+int selectIndex=1;
 class _PersonalizePageEightState extends State<PersonalizePageEight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       backgroundColor: MyColor.whiteColor,
-      body: SafeArea(child: Padding(padding: EdgeInsets.all(16),
+      body: SafeArea(child: Padding(padding: const EdgeInsets.all(16),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,20 +93,22 @@ class _PersonalizePageEightState extends State<PersonalizePageEight> {
                 Container(
                     width: 24,
                     height: 24,
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: MyColor.splashBacColor.withAlpha(50),
+                              color: MyColor.whiteColor.withAlpha(50),
                               spreadRadius: 3
                           )
                         ],
                         borderRadius: BorderRadius.circular(8),
                         color:MyColor.orangeColor
                     ),
-                    child: Image(image: AssetImage(MyImage.dotIcon),height: 30,width: 30,color: MyColor.whiteColor,)
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: SvgPicture.asset(MyImage.rightMark,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),),
+                    )
                 ),
-        
                 Container(
                   width: 80,
                   height: 4,
@@ -99,19 +117,19 @@ class _PersonalizePageEightState extends State<PersonalizePageEight> {
                 Container(
                     width: 24,
                     height: 24,
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     //padding: EdgeInsets.all(3),
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: MyColor.whiteColor,
+                              color: MyColor.splashBacColor.withAlpha(50),
                               spreadRadius: 5
                           )
                         ],
                         borderRadius: BorderRadius.circular(8),
-                       border: Border.all(color: MyColor.grayColor)
+                      color: MyColor.splashBacColor
                     ),
-                    child: Image(image: AssetImage(MyImage.dotIcon),height: 30,width: 30,color: MyColor.grayColor,)
+                    child: Image(image: AssetImage(MyImage.dotIcon),height: 30,width: 30,color: MyColor.whiteColor,)
                 ),
         
                 Container(
@@ -122,8 +140,8 @@ class _PersonalizePageEightState extends State<PersonalizePageEight> {
                 Container(
                     width: 24,
                     height: 24,
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.all(3),
+                    margin: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(3),
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
@@ -222,79 +240,55 @@ class _PersonalizePageEightState extends State<PersonalizePageEight> {
               ),
             ),
             const SizedBox(height: 15,),
-           Wrap(
-             children: [
-               Container(
-                 padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(15),
-                     color: MyColor.blackColor
-                 ),
-                 child: Text("08:00",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
-               ),
-               const SizedBox(width: 10,),
-               Container(
-                 padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(15),
-                     color: MyColor.blackColor
-                 ),
-                 child: Text("08:00",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
-               ),
-               Container(
-                 padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(15),
-                     color: MyColor.blackColor
-                 ),
-                 child: Text("08:00",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
-               ),
-               const SizedBox(width: 10,),
-               Container(
-                 padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(15),
-                     color: MyColor.blackColor
-                 ),
-                 child: Text("08:00",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
-               ),
-               Container(
-                 padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(15),
-                     color: MyColor.blackColor
-                 ),
-                 child: Text("08:00",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
-               ),
-               const SizedBox(width: 10,),
-               Container(
-                 padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(15),
-                     color: MyColor.blackColor
-                 ),
-                 child: Text("08:00",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
-               ),
-             ],
-           ),
-            const SizedBox(height: 10,),
+            const Divider(),
+            const SizedBox(height: 15,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Select Time Slot",style: regularTextStyle24.copyWith(fontSize: 16),),
+                Image(image: AssetImage(MyImage.questionMarkIcon),height: 25,color: MyColor.grayColor.withAlpha(150),),
+              ],
+            ),
+            const SizedBox(height: 14,),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: timeList.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ), itemBuilder: (context, index) {
+                  bool isSelect=index==selectIndex;
+                  return GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        selectIndex=index;
+                      });
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      //  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 8),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: isSelect?MyColor.blackColor:MyColor.borderColor,
+                          boxShadow: [
+                            BoxShadow(
+                                color: isSelect?MyColor.blackColor.withAlpha(30):Colors.transparent,
+                                spreadRadius: isSelect?5:0
+                            )
+                          ]
+                      ),
+                      child: Text(timeList[index],style: regularTextStyle24.copyWith(color: isSelect?MyColor.whiteColor:MyColor.blackColor),),
+                    ),
+                  );
+                },),
             const SizedBox(height: 20,),
-            const SizedBox(height: 15,),
-            const SizedBox(height: 15,),
-            const SizedBox(height: 10,),
-            const SizedBox(height: 15,),
-            const SizedBox(height: 10,),
-            const SizedBox(height: 15,),
-            const SizedBox(height: 10,),
-            const SizedBox(height: 15,),
-            const SizedBox(height: 15,),
-            const SizedBox(height: 20,),
-            const SizedBox(height: 15,),
             SizedBox(
               height: 54,
               child: ElevatedButton(
                 onPressed: () {
-                  //Navigator.pushNamed(context, RouteHelper.virtualFitnessPageTwentyOne);
+                 Navigator.pushNamed(context, RouteHelper.personalizePageNine);
                 },
                 style: ButtonStyle(
                     backgroundColor:

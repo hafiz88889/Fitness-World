@@ -152,6 +152,13 @@ class MyImage{
    static String robotImageFour="assets/images/robotimagefour.jpg";
    static String ladyImageOne="assets/images/ladyImageOne.png";
    static String dotIcon="assets/icons/dot.png";
+   static String cartIcon="assets/icons/cartIcon.png";
+   static String visaCard="assets/icons/visa.png";
+   static String masterCard="assets/icons/mastercard.png";
+   static String googlePay="assets/icons/google_pay.png";
+   static String applePay="assets/icons/apple_pay.png";
+   static String amazonPay="assets/icons/amazon_pay.png";
+   static String cardBackImage="assets/images/visaCardbackimage.png";
 
 
 }

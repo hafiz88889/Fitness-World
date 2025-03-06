@@ -159,6 +159,7 @@ class MyImage{
    static String applePay="assets/icons/apple_pay.png";
    static String amazonPay="assets/icons/amazon_pay.png";
    static String cardBackImage="assets/images/visaCardbackimage.png";
+   static String searchImage="assets/images/searchImage.jpg";
 
 
 }

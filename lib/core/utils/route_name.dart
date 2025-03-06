@@ -57,6 +57,7 @@ import 'package:fitnessworld/features/home_screen/presentation/screen/home_scree
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eight.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eleven.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_fifteen.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_five.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_four.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_fourteen.dart';
@@ -78,6 +79,9 @@ import 'package:fitnessworld/features/profile_setting_help_center_screen/present
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_six.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_three.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_two.dart';
+import 'package:fitnessworld/features/search_screen/presentation/screen/search_page_one.dart';
+import 'package:fitnessworld/features/search_screen/presentation/screen/search_page_three.dart';
+import 'package:fitnessworld/features/search_screen/presentation/screen/search_page_two.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/reset_password_page.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/sign_in_page.dart';
 import 'package:fitnessworld/features/sing_in_sign_up_screen/presentation/screen/sign_up_page.dart';
@@ -254,6 +258,10 @@ class RouteHelper{
   static String personalizePageTwelve="/PersonalizePageTwelve";
   static String personalizePageThirteen="/PersonalizePageThirteen";
   static String personalizePageFourteen="/PersonalizePageFourteen";
+  static String personalizePageFifteen="/PersonalizePageFifteen";
+  static String searchPageOne="/SearchPageOne";
+  static String searchPageTwo="/SearchPageTwo";
+  static String searchPageThree="/SearchPageThree";
 
 
 
@@ -388,6 +396,10 @@ return{
   RouteHelper.personalizePageTwelve:(context)=> const PersonalizePageTwelve(),
   RouteHelper.personalizePageThirteen:(context)=> const PersonalizePageThirteen(),
   RouteHelper.personalizePageFourteen:(context)=> const PersonalizePageFourteen(),
+  RouteHelper.personalizePageFifteen:(context)=> const PersonalizePageFifteen(),
+  RouteHelper.searchPageOne:(context)=> const SearchPageOne(),
+  RouteHelper.searchPageTwo:(context)=> const SearchPageTwo(),
+  RouteHelper.searchPageThree:(context)=> const SearchPageThree(),
 
 
 };

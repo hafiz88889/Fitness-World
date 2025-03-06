@@ -1,4 +1,5 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -175,7 +176,7 @@ class _PersonalizePageFourteenState extends State<PersonalizePageFourteen> {
             SizedBox(
               height: 56,
               child: ElevatedButton(onPressed: (){
-               // Navigator.pushNamed(context, RouteHelper.profileScreenOne);
+              Navigator.pushNamed(context, RouteHelper.personalizePageFifteen);
               },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: MyColor.blackColor,

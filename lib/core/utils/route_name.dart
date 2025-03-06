@@ -59,12 +59,15 @@ import 'package:fitnessworld/features/personalize_coching_screen/presentation/sc
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eleven.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_five.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_four.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_fourteen.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_nine.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_one.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_seven.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_six.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_ten.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_thirteen.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_three.dart';
+import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_twelve.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_two.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_eight.dart';
 import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_five.dart';
@@ -248,6 +251,9 @@ class RouteHelper{
   static String personalizePageNine="/PersonalizePageNine";
   static String personalizePageTen="/PersonalizePageTen";
   static String personalizePageEleven="/PersonalizePageEleven";
+  static String personalizePageTwelve="/PersonalizePageTwelve";
+  static String personalizePageThirteen="/PersonalizePageThirteen";
+  static String personalizePageFourteen="/PersonalizePageFourteen";
 
 
 
@@ -379,6 +385,9 @@ return{
   RouteHelper.personalizePageNine:(context)=> const PersonalizePageNine(),
   RouteHelper.personalizePageTen:(context)=> const PersonalizePageTen(),
   RouteHelper.personalizePageEleven:(context)=> const PersonalizePageEleven(),
+  RouteHelper.personalizePageTwelve:(context)=> const PersonalizePageTwelve(),
+  RouteHelper.personalizePageThirteen:(context)=> const PersonalizePageThirteen(),
+  RouteHelper.personalizePageFourteen:(context)=> const PersonalizePageFourteen(),
 
 
 };

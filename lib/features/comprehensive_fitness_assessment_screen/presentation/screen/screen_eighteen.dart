@@ -113,7 +113,7 @@ class _ScreenEighteenState extends State<ScreenEighteen> {
                         Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: MyColor.whiteColor
@@ -122,7 +122,7 @@ class _ScreenEighteenState extends State<ScreenEighteen> {
                             ) ,
                             const SizedBox(width: 10,),
                             Container(
-                              padding: EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: MyColor.whiteColor

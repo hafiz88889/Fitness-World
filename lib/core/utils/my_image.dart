@@ -160,6 +160,12 @@ class MyImage{
    static String amazonPay="assets/icons/amazon_pay.png";
    static String cardBackImage="assets/images/visaCardbackimage.png";
    static String searchImage="assets/images/searchImage.jpg";
+   static String internetError="assets/images/internalError.JPG";
+   static String maintanence="assets/images/maintanence.JPG";
+   static String notAllow="assets/images/notAllow.JPG";
+   static String noInternet="assets/images/wifideviceImage.JPG";
+   static String featureLocked="assets/images/featurelocked.JPG";
+   static String twoManOneWoman="assets/images/twomanonewoman.jpg";
 
 
 }

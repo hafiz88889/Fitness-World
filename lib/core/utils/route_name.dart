@@ -13,6 +13,8 @@ import 'package:fitnessworld/features/activity_tracker_screen/presentation/scree
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_two.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_eight.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_seven.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_one.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_two.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eight.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eighteen.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eleven.dart';
@@ -43,6 +45,12 @@ import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/d
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrition_page_twelve.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/diet_nutrititio_page_one.dart';
 import 'package:fitnessworld/features/diet_nutritio_screen/presentation/screen/nutrition_diet_page_two.dart';
+import 'package:fitnessworld/features/error_utils_screen/presentation/screen/error_page_five.dart';
+import 'package:fitnessworld/features/error_utils_screen/presentation/screen/error_page_four.dart';
+import 'package:fitnessworld/features/error_utils_screen/presentation/screen/error_page_one.dart';
+import 'package:fitnessworld/features/error_utils_screen/presentation/screen/error_page_six.dart';
+import 'package:fitnessworld/features/error_utils_screen/presentation/screen/error_page_three.dart';
+import 'package:fitnessworld/features/error_utils_screen/presentation/screen/error_page_two.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_four.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_page_one.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_eight.dart';
@@ -262,6 +270,14 @@ class RouteHelper{
   static String searchPageOne="/SearchPageOne";
   static String searchPageTwo="/SearchPageTwo";
   static String searchPageThree="/SearchPageThree";
+  static String errorPageOne="/ErrorPageOne";
+  static String errorPageTwo="/ErrorPageTwo";
+  static String errorPageThree="/errorPageThree";
+  static String errorPageFour="/errorPageFour";
+  static String errorPageFive="/errorPageFive";
+  static String errorPageSix="/errorPageSix";
+  static String communityPageOne="/CommunityPageOne";
+  static String communityPageTwo="/CommunityPageTwo";
 
 
 
@@ -400,6 +416,14 @@ return{
   RouteHelper.searchPageOne:(context)=> const SearchPageOne(),
   RouteHelper.searchPageTwo:(context)=> const SearchPageTwo(),
   RouteHelper.searchPageThree:(context)=> const SearchPageThree(),
+  RouteHelper.errorPageOne:(context)=> const ErrorPageOne(),
+  RouteHelper.errorPageTwo:(context)=> const ErrorPageTwo(),
+  RouteHelper.errorPageThree:(context)=> const ErrorPageThree(),
+  RouteHelper.errorPageFour:(context)=> const ErrorPageFour(),
+  RouteHelper.errorPageFive:(context)=> const ErrorPageFive(),
+  RouteHelper.errorPageSix:(context)=> const ErrorPageSix(),
+  RouteHelper.communityPageOne:(context)=> const CommunityPageOne(),
+  RouteHelper.communityPageTwo:(context)=> const CommunityPageTwo(),
 
 
 };

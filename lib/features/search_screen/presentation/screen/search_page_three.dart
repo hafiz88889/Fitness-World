@@ -1,4 +1,5 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/features/search_screen/presentation/widget/search_bottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -28,11 +29,11 @@ class _SearchPageThreeState extends State<SearchPageThree> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             height: 250,
             width: double.infinity,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(
+                borderRadius: const BorderRadius.vertical(
                   bottom: Radius.circular(50),
                 ),
                 color: MyColor.splashBacColor),
@@ -91,10 +92,10 @@ class _SearchPageThreeState extends State<SearchPageThree> {
                           color: MyColor.blackColor.withAlpha(200)),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.transparent)),
+                          borderSide: const BorderSide(color: Colors.transparent)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.transparent)),
+                          borderSide: const BorderSide(color: Colors.transparent)),
                     ),
                   ),
                   const SizedBox(
@@ -107,8 +108,8 @@ class _SearchPageThreeState extends State<SearchPageThree> {
                       itemCount: item.length,
                       itemBuilder: (context, index) {
                         return Container(
-                          margin: EdgeInsets.only(right: 10),
-                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          margin: const EdgeInsets.only(right: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 15),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(
@@ -144,7 +145,7 @@ class _SearchPageThreeState extends State<SearchPageThree> {
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
                 Row(
@@ -156,7 +157,7 @@ class _SearchPageThreeState extends State<SearchPageThree> {
                     ),
                     Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+                          const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border:
@@ -200,59 +201,102 @@ class _SearchPageThreeState extends State<SearchPageThree> {
                 ListView.builder(
                   shrinkWrap: true,
                   itemCount: 5,
-                  physics: AlwaysScrollableScrollPhysics(),
+                  physics: const AlwaysScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: MyColor.borderColor),
-                      child: Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            height: 66,
-                            width: 66,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: MyColor.whiteColor),
-                            child: SvgPicture.asset(
-                              MyImage.two,height: 25,width: 25,
-                              colorFilter: ColorFilter.mode(
+                    return GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                          shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(35))),
+                          isScrollControlled: true,
+                          context: (context),
+                          builder: (context) {
+                            return const FractionallySizedBox(
+                              heightFactor: 0.65,
+                              child: SearchBottomsheet(),
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 10),
+                        padding:
+                            const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: MyColor.borderColor),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(10),
+                              height: 66,
+                              width: 66,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: MyColor.whiteColor),
+                              child: SvgPicture.asset(
+                                MyImage.two,
+                                height: 25,
+                                width: 25,
+                                colorFilter: ColorFilter.mode(
                                   MyColor.grayColor.withAlpha(150),
-                                  BlendMode.srcIn,),
+                                  BlendMode.srcIn,
+                                ),
+                              ),
                             ),
-                          ),
-                          const SizedBox(width: 15,),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Virtual AI Couch",style: regularTextStyle24,),
-                                const SizedBox(height: 6,),
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding:EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(8),
-                                        border: Border.all(color: MyColor.greenColor)
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Virtual AI Couch",
+                                    style: regularTextStyle24,
+                                  ),
+                                  const SizedBox(
+                                    height: 6,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(5),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                                color: MyColor.greenColor)),
+                                        child: Text(
+                                          "Fitness",
+                                          style: regularTextStyle24.copyWith(
+                                              fontSize: 14),
+                                        ),
                                       ),
-                                      child: Text("Fitness",style: regularTextStyle24.copyWith(fontSize: 14),),
-                                    ),
-                                    const SizedBox(width: 5,),
-                                    Text("98% Match",style: regularTextStyle24.copyWith(fontSize: 16),)
-                                  ],
-                                )
-                              ],
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(
+                                        "80% Match",
+                                        style: regularTextStyle24.copyWith(
+                                            fontSize: 16),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
-                          ),
-                          Transform.rotate(angle: 3,
-                          child: SvgPicture.asset(MyImage.backIcon,height: 25,),
-                          )
-                        ],
+                            Transform.rotate(
+                              angle: 3,
+                              child: GestureDetector(
+                                  child: SvgPicture.asset(
+                                MyImage.backIcon,
+                                height: 25,
+                              )),
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },

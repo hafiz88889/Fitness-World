@@ -13,6 +13,7 @@ import 'package:fitnessworld/features/activity_tracker_screen/presentation/scree
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_two.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_eight.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_seven.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_four.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_one.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_three.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_two.dart';
@@ -280,6 +281,7 @@ class RouteHelper{
   static String communityPageOne="/CommunityPageOne";
   static String communityPageTwo="/CommunityPageTwo";
   static String communityPageThree="/CommunityPageThree";
+  static String communityPageFour="/CommunityPageFour";
 
 
 
@@ -427,6 +429,7 @@ return{
   RouteHelper.communityPageOne:(context)=> const CommunityPageOne(),
   RouteHelper.communityPageTwo:(context)=> const CommunityPageTwo(),
   RouteHelper.communityPageThree:(context)=> const CommunityPageThree(),
+  RouteHelper.communityPageFour:(context)=> const CommunityPageFour(),
 
 
 };

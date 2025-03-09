@@ -1,17 +1,21 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
-import 'package:fitnessworld/core/utils/route_name.dart';
-import 'package:fitnessworld/features/community_resourse_screen/presentation/widget/check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/utils/my_image.dart';
 import '../../../../core/utils/my_text_style.dart';
 
-class CommunityPageThree extends StatelessWidget {
-  const CommunityPageThree({super.key});
+class CommunityPageFour extends StatelessWidget {
+  const CommunityPageFour({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String,dynamic>>agenda=[
+      {"image":MyImage.weightLiftIcon,"title":"Personalize Fitness 101","time":"30min","second":"Remote","sl":"01"},
+      {"image":MyImage.fireIcon,"title":"Personalize Fitness 101","time":"30min","second":"Remote","sl":"02"},
+      {"image":MyImage.five,"title":"Personalize Fitness 101","time":"30min","second":"Remote","sl":"03"},
+      {"image":MyImage.two,"title":"Personalize Fitness 101","time":"30min","second":"Remote","sl":"04"},
+    ];
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
       body: SingleChildScrollView(
@@ -202,7 +206,7 @@ class CommunityPageThree extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Introduction",
+                    "Workshop overview",
                     style: regularTextStyle24.copyWith(fontSize: 22),
                   ),
                   const SizedBox(
@@ -213,17 +217,69 @@ class CommunityPageThree extends StatelessWidget {
                     style: regularTextStyle24.copyWith(
                         fontSize: 14, color: MyColor.grayColor.withAlpha(150)),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   Container(
-                    height: 550,
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(80),
-                      image: DecorationImage(image: AssetImage(MyImage.runningMan),fit: BoxFit.cover)
+                        borderRadius: BorderRadius.circular(20),
+                        color: MyColor.splashBacColorTwo),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: MyColor.borderColor.withAlpha(120),
+                          ),
+                          child: Image(
+                            image: AssetImage(MyImage.calenderIcon),
+                            color: MyColor.whiteColor,
+                            height: 20,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "8 September 2025",
+                                style: regularTextStyle24.copyWith(
+                                    fontSize: 16, color: MyColor.whiteColor),
+                              ),
+                              Text(
+                                "Monday 08:00-08:30PM",
+                                style: regularTextStyle18.copyWith(
+                                    fontSize: 14, color: MyColor.whiteColor),
+                              ),
+                              Text(
+                                "26 Joined 18 Interest ",
+                                style: regularTextStyle18.copyWith(
+                                    fontSize: 14, color: MyColor.whiteColor),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Transform.rotate(
+                            angle: -3,
+                            child: SvgPicture.asset(
+                              MyImage.backIcon,
+                              colorFilter: ColorFilter.mode(
+                                  MyColor.whiteColor, BlendMode.srcIn),
+                              height: 25,
+                            ))
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Text(
-                    "Introduction",
+                    "Agenda",
                     style: regularTextStyle24.copyWith(fontSize: 22),
                   ),
                   const SizedBox(
@@ -234,61 +290,136 @@ class CommunityPageThree extends StatelessWidget {
                     style: regularTextStyle24.copyWith(
                         fontSize: 14, color: MyColor.grayColor.withAlpha(150)),
                   ),
-                  const SizedBox(height: 10,),
-                 Wrap(
-                   children: [
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check"),
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check Nutrition")
-                   ],
-                 ),
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  ListView.builder(
+                    itemCount: agenda.length,
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.all(12),
+                    //    padding: EdgeInsets.symmetric(horizontal: 1,vertical: 2)
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: MyColor.borderColor,
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: MyColor.whiteColor,
+                              ),
+                              child: SvgPicture.asset(
+                                agenda[index]["image"],
+                                colorFilter: ColorFilter.mode(
+                                    MyColor.grayColor, BlendMode.srcIn),
+                                height: 20,
+                              ),
+                            ),
+                            const SizedBox(width: 15,),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                              Text(agenda[index]["title"],style: regularTextStyle24.copyWith(fontSize: 16),),
+                              const SizedBox(height: 8,),
+                              Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    MyImage.watchIcon,
+                                    colorFilter: ColorFilter.mode(
+                                        MyColor.grayColor, BlendMode.srcIn), height: 20,
+                                  ),
+                                  Text(agenda[index]["time"],style: regularTextStyle24.copyWith(fontSize: 14),),
+                                  const SizedBox(width: 20,),
+                                  SvgPicture.asset(
+                                    MyImage.fireIcon,
+                                    colorFilter: ColorFilter.mode(
+                                        MyColor.grayColor, BlendMode.srcIn), height: 20,
+                                  ),
+                                  Text(agenda[index]["second"],style: regularTextStyle24.copyWith(fontSize: 14),),
+                                ],
+                              ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 2),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: MyColor.splashBacColor
+                              ),
+                              child: Text(agenda[index]["sl"],style: regularTextStyle24.copyWith(color: MyColor.whiteColor,fontSize: 16),),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                   Container(
                     padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: MyColor.splashBacColor
-                    ),
+                        borderRadius: BorderRadius.circular(20),
+                        color: MyColor.splashBacColor),
                     child: Column(
                       children: [
                         Container(
-                          padding:EdgeInsets.all(5),
-                          decoration:
-                          BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: MyColor.whiteColor)
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: MyColor.whiteColor)),
+                          child: Text(
+                            "Go Pro",
+                            style: regularTextStyle24.copyWith(
+                                fontSize: 16, color: MyColor.whiteColor),
                           ),
-                          child: Text("Go Pro",style: regularTextStyle24.copyWith(fontSize: 16,color: MyColor.whiteColor),),
                         ),
-                        const SizedBox(height: 20,),
-                        Text("Unlocked Full Article!",style: regularTextStyle24.copyWith(fontSize: 24,color: MyColor.whiteColor),),
-                        const SizedBox(height: 15,),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Unlocked Full Article!",
+                          style: regularTextStyle24.copyWith(
+                              fontSize: 24, color: MyColor.whiteColor),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
                         SizedBox(
                           height: 54,
                           child: ElevatedButton(
                             onPressed: () {
-                            Navigator.pushNamed(context, RouteHelper.communityPageFour);
+                              // Navigator.pushNamed(context, RouteHelper.communityPageTwo);
                             },
                             style: ButtonStyle(
                                 backgroundColor:
-                                WidgetStateProperty.all(MyColor.whiteColor),
-                                shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(19)))),
+                                    WidgetStateProperty.all(MyColor.whiteColor),
+                                shape: WidgetStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(19)))),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Go Pro Now!",
                                   style: regularTextStyle24.copyWith(
-                                      color: MyColor.splashBacColor, fontSize: 16),
+                                      color: MyColor.splashBacColor,
+                                      fontSize: 16),
                                 ),
                                 const SizedBox(
                                   width: 10,
                                 ),
-                               Image(image: AssetImage(MyImage.star),color: MyColor.splashBacColor,height: 20,)
+                                Image(
+                                  image: AssetImage(MyImage.star),
+                                  color: MyColor.splashBacColor,
+                                  height: 20,
+                                )
                               ],
                             ),
                           ),
@@ -296,7 +427,9 @@ class CommunityPageThree extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             ),

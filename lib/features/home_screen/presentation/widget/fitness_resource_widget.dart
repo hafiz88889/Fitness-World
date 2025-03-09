@@ -18,7 +18,7 @@ class FitnessResourceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return    Container(
+    return   Container(
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 25),
       decoration: BoxDecoration(

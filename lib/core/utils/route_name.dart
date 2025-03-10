@@ -13,8 +13,14 @@ import 'package:fitnessworld/features/activity_tracker_screen/presentation/scree
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_two.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_tracker_page_eight.dart';
 import 'package:fitnessworld/features/activity_tracker_screen/presentation/screen/activity_screen_page_seven.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_eight.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_five.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_four.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_nine.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_one.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_seven.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_six.dart';
+import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_ten.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_three.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/screen/community_page_two.dart';
 import 'package:fitnessworld/features/comprehensive_fitness_assessment_screen/presentation/screen/screen_eight.dart';
@@ -282,6 +288,12 @@ class RouteHelper{
   static String communityPageTwo="/CommunityPageTwo";
   static String communityPageThree="/CommunityPageThree";
   static String communityPageFour="/CommunityPageFour";
+  static String communityPageFive="/CommunityPageFive";
+  static String communityPageSix="/CommunityPageSix";
+  static String communityPageSeven="/CommunityPageSeven";
+  static String communityPageEight="/CommunityPageEight";
+  static String communityPageNine="/CommunityPageNine";
+  static String communityPageTen="/CommunityPageTen";
 
 
 
@@ -430,6 +442,12 @@ return{
   RouteHelper.communityPageTwo:(context)=> const CommunityPageTwo(),
   RouteHelper.communityPageThree:(context)=> const CommunityPageThree(),
   RouteHelper.communityPageFour:(context)=> const CommunityPageFour(),
+  RouteHelper.communityPageFive:(context)=> const CommunityPageFive(),
+  RouteHelper.communityPageSix:(context)=> const CommunityPageSix(),
+  RouteHelper.communityPageSeven:(context)=> const CommunityPageSeven(),
+  RouteHelper.communityPageEight:(context)=> const CommunityPageEight(),
+  RouteHelper.communityPageNine:(context)=> const CommunityPageNine(),
+  RouteHelper.communityPageTen:(context)=> const CommunityPageTen(),
 
 
 };

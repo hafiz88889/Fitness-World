@@ -1,4 +1,5 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
+import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -23,9 +24,9 @@ class CommunityPageFour extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     bottom: Radius.circular(35),
                   ),
                   color: MyColor.blackColor),
@@ -201,7 +202,7 @@ class CommunityPageFour extends StatelessWidget {
               height: 15,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -221,14 +222,14 @@ class CommunityPageFour extends StatelessWidget {
                     height: 20,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: MyColor.splashBacColorTwo),
                     child: Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: MyColor.borderColor.withAlpha(120),
@@ -296,11 +297,11 @@ class CommunityPageFour extends StatelessWidget {
                   ListView.builder(
                     itemCount: agenda.length,
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Container(
-                        margin: EdgeInsets.only(bottom: 10),
-                    padding: EdgeInsets.all(12),
+                        margin: const EdgeInsets.only(bottom: 10),
+                    padding: const EdgeInsets.all(12),
                     //    padding: EdgeInsets.symmetric(horizontal: 1,vertical: 2)
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
@@ -309,7 +310,7 @@ class CommunityPageFour extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                                 color: MyColor.whiteColor,
@@ -349,7 +350,7 @@ class CommunityPageFour extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 2),
+                              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 2),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: MyColor.splashBacColor
@@ -362,64 +363,36 @@ class CommunityPageFour extends StatelessWidget {
                     },
                   ),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: MyColor.splashBacColor),
-                    child: Column(
+                        color: MyColor.blackColor
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: MyColor.whiteColor)),
-                          child: Text(
-                            "Go Pro",
-                            style: regularTextStyle24.copyWith(
-                                fontSize: 16, color: MyColor.whiteColor),
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Entry Price",style: regularTextStyle24.copyWith(color: MyColor.whiteColor,fontSize: 16),),
+                            Text("\$14.99",style: regularTextStyle24.copyWith(color: MyColor.whiteColor,fontSize: 24),),
+                          ],
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "Unlocked Full Article!",
-                          style: regularTextStyle24.copyWith(
-                              fontSize: 24, color: MyColor.whiteColor),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        SizedBox(
-                          height: 54,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              // Navigator.pushNamed(context, RouteHelper.communityPageTwo);
-                            },
-                            style: ButtonStyle(
-                                backgroundColor:
-                                    WidgetStateProperty.all(MyColor.whiteColor),
-                                shape: WidgetStateProperty.all(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(19)))),
+                        GestureDetector(
+                          onTap: (){
+                    Navigator.pushNamed(context, RouteHelper.communityPageFive);
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                            decoration:BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: MyColor.splashBacColor,
+                            ),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  "Go Pro Now!",
-                                  style: regularTextStyle24.copyWith(
-                                      color: MyColor.splashBacColor,
-                                      fontSize: 16),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Image(
-                                  image: AssetImage(MyImage.star),
-                                  color: MyColor.splashBacColor,
-                                  height: 20,
-                                )
+                                Text("Book Seat",style: regularTextStyle24.copyWith(color: MyColor.whiteColor),),
+                               const SizedBox(width: 10,),
+                               SvgPicture.asset(MyImage.addIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),)
                               ],
                             ),
                           ),

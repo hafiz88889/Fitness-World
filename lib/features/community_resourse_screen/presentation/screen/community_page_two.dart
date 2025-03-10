@@ -3,14 +3,11 @@ import 'dart:convert';
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
-import 'package:fitnessworld/core/utils/route_name.dart';
-import 'package:fitnessworld/features/community_resourse_screen/presentation/widget/bottomsheet.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/widget/page_two_tabbarview_one.dart';
 import 'package:fitnessworld/features/community_resourse_screen/presentation/widget/tabbar_widget_two.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
-import 'package:percent_indicator/percent_indicator.dart';
 
 class CommunityPageTwo extends StatefulWidget {
   const CommunityPageTwo({super.key});
@@ -176,7 +173,7 @@ class _CommunityPageTwoState extends State<CommunityPageTwo> {
                 ],
               ),
             ),
-           Expanded(
+           const Expanded(
              child: TabBarView(
                children: [
                  PageTwoTabbarviewOne(),

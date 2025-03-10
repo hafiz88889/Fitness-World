@@ -112,7 +112,7 @@ class PersonalizePageTen extends StatelessWidget {
       ),
       ),
       bottomNavigationBar: Padding(padding: const EdgeInsets.all(15),
-      child:       SizedBox(
+      child: SizedBox(
         height: 54,
         child: ElevatedButton(
           onPressed: () {

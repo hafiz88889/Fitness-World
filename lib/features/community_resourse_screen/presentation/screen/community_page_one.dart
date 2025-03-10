@@ -4,7 +4,6 @@ import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CommunityPageOne extends StatelessWidget {
   const CommunityPageOne({super.key});

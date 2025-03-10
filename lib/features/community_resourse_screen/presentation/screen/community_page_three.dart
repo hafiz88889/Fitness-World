@@ -1,15 +1,29 @@
 import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
-import 'package:fitnessworld/features/community_resourse_screen/presentation/widget/check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/utils/my_image.dart';
 import '../../../../core/utils/my_text_style.dart';
 
-class CommunityPageThree extends StatelessWidget {
+class CommunityPageThree extends StatefulWidget {
   const CommunityPageThree({super.key});
 
+  @override
+  State<CommunityPageThree> createState() => _CommunityPageThreeState();
+}
+final List<Map<String,dynamic>>checkBox=[
+  {"text":"Check Nutrition",},
+  {"text":"Eat Healthy",},
+  {"text":"Exercise Routine",},
+  {"text":"Eat Green Food",},
+  {"text":"Check Nutrition",},
+  {"text":"Check Nutrition",},
+  {"text":"Check Nutrition",},
+  {"text":"Check Nutrition",},
+];
+bool isSelect=false;
+class _CommunityPageThreeState extends State<CommunityPageThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +33,9 @@ class CommunityPageThree extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     bottom: Radius.circular(35),
                   ),
                   color: MyColor.blackColor),
@@ -197,7 +211,7 @@ class CommunityPageThree extends StatelessWidget {
               height: 15,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -213,15 +227,20 @@ class CommunityPageThree extends StatelessWidget {
                     style: regularTextStyle24.copyWith(
                         fontSize: 14, color: MyColor.grayColor.withAlpha(150)),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   Container(
                     height: 550,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(80),
-                      image: DecorationImage(image: AssetImage(MyImage.runningMan),fit: BoxFit.cover)
-                    ),
+                        borderRadius: BorderRadius.circular(80),
+                        image: DecorationImage(
+                            image: AssetImage(MyImage.runningMan),
+                            fit: BoxFit.cover)),
                   ),
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Text(
                     "Introduction",
                     style: regularTextStyle24.copyWith(fontSize: 22),
@@ -234,61 +253,105 @@ class CommunityPageThree extends StatelessWidget {
                     style: regularTextStyle24.copyWith(
                         fontSize: 14, color: MyColor.grayColor.withAlpha(150)),
                   ),
-                  const SizedBox(height: 10,),
-                 Wrap(
-                   children: [
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check"),
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check Nutrition"),
-                    CheckBox(title: "Check Nutrition")
-                   ],
-                 ),
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                     GridView.builder(
+                       itemCount: 8,
+                       shrinkWrap: true,
+                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                             crossAxisCount: 2,
+                         crossAxisSpacing: 10,
+                         mainAxisSpacing: 10,
+                           childAspectRatio: 5,
+                         ),
+                         itemBuilder: (context, index) {
+                           return Row(
+                             children: [
+                               Checkbox(
+                                 activeColor: MyColor.splashBacColorTwo,
+                                 shape: RoundedRectangleBorder(
+                                     borderRadius: BorderRadius.circular(5)),
+                                 value: isSelect,
+                                 onChanged: (value) {
+                                   setState(() {
+                                     isSelect = value!;
+                                   });
+                                 },
+                               ),
+                               const SizedBox(
+                                 width: 10,
+                               ),
+                               Text(
+                                 checkBox[index]["text"],
+                                 style: regularTextStyle24.copyWith(fontSize: 14),
+                               ),
+                             ],
+                           );
+                         },),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: MyColor.splashBacColor
-                    ),
+                        borderRadius: BorderRadius.circular(20),
+                        color: MyColor.splashBacColor),
                     child: Column(
                       children: [
                         Container(
-                          padding:EdgeInsets.all(5),
-                          decoration:
-                          BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: MyColor.whiteColor)
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: MyColor.whiteColor)),
+                          child: Text(
+                            "Go Pro",
+                            style: regularTextStyle24.copyWith(
+                                fontSize: 16, color: MyColor.whiteColor),
                           ),
-                          child: Text("Go Pro",style: regularTextStyle24.copyWith(fontSize: 16,color: MyColor.whiteColor),),
                         ),
-                        const SizedBox(height: 20,),
-                        Text("Unlocked Full Article!",style: regularTextStyle24.copyWith(fontSize: 24,color: MyColor.whiteColor),),
-                        const SizedBox(height: 15,),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Unlocked Full Article!",
+                          style: regularTextStyle24.copyWith(
+                              fontSize: 24, color: MyColor.whiteColor),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
                         SizedBox(
                           height: 54,
                           child: ElevatedButton(
                             onPressed: () {
-                            Navigator.pushNamed(context, RouteHelper.communityPageFour);
+                              Navigator.pushNamed(
+                                  context, RouteHelper.communityPageFour);
                             },
                             style: ButtonStyle(
                                 backgroundColor:
-                                WidgetStateProperty.all(MyColor.whiteColor),
-                                shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(19)))),
+                                    WidgetStateProperty.all(MyColor.whiteColor),
+                                shape: WidgetStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(19)))),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Go Pro Now!",
                                   style: regularTextStyle24.copyWith(
-                                      color: MyColor.splashBacColor, fontSize: 16),
+                                      color: MyColor.splashBacColor,
+                                      fontSize: 16),
                                 ),
                                 const SizedBox(
                                   width: 10,
                                 ),
-                               Image(image: AssetImage(MyImage.star),color: MyColor.splashBacColor,height: 20,)
+                                Image(
+                                  image: AssetImage(MyImage.star),
+                                  color: MyColor.splashBacColor,
+                                  height: 20,
+                                )
                               ],
                             ),
                           ),
@@ -296,7 +359,9 @@ class CommunityPageThree extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             ),

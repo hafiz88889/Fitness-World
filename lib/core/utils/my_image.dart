@@ -166,6 +166,7 @@ class MyImage{
    static String noInternet="assets/images/wifideviceImage.JPG";
    static String featureLocked="assets/images/featurelocked.JPG";
    static String twoManOneWoman="assets/images/twomanonewoman.jpg";
+   static String downloadIcon="assets/icons/downloadIcon.png";
 
 
 }

@@ -71,6 +71,11 @@ import 'package:fitnessworld/features/home_screen/presentation/screen/home_scree
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_three.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_twelve.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_five.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_four.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_one.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_theee.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_two.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eight.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eleven.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_fifteen.dart';
@@ -294,6 +299,11 @@ class RouteHelper{
   static String communityPageEight="/CommunityPageEight";
   static String communityPageNine="/CommunityPageNine";
   static String communityPageTen="/CommunityPageTen";
+  static String notificationPageOne="/NotificationPageOne";
+  static String notificationPageTwo="/NotificationPageTwo";
+  static String notificationPageThree="/NotificationPageThree";
+  static String notificationPageFour="/NotificationPageFour";
+  static String notificationPageFive="/NotificationPageFive";
 
 
 
@@ -448,6 +458,11 @@ return{
   RouteHelper.communityPageEight:(context)=> const CommunityPageEight(),
   RouteHelper.communityPageNine:(context)=> const CommunityPageNine(),
   RouteHelper.communityPageTen:(context)=> const CommunityPageTen(),
+  RouteHelper.notificationPageOne:(context)=> const NotificationPageOne(),
+  RouteHelper.notificationPageTwo:(context)=> const NotificationPageTwo(),
+  RouteHelper.notificationPageThree:(context)=> const NotificationPageThree(),
+  RouteHelper.notificationPageFour:(context)=> const NotificationPageFour(),
+  RouteHelper.notificationPageFive:(context)=> const NotificationPageFive(),
 
 
 };

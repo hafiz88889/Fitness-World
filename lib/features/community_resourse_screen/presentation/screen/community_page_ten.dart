@@ -71,7 +71,7 @@ class CommunityPageTen extends StatelessWidget {
                       height: 56,
                       child: ElevatedButton(
                         onPressed: () {
-                         // Navigator.pushNamed(context, RouteHelper.communityPageSeven);
+                          Navigator.pushNamed(context, RouteHelper.notificationPageOne);
                         },
                         style: ButtonStyle(
                             backgroundColor:

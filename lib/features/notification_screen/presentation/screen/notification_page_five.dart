@@ -3,6 +3,7 @@ import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class NotificationPageFive extends StatelessWidget {
@@ -23,7 +24,7 @@ class NotificationPageFive extends StatelessWidget {
             },
             blendMode: BlendMode.darken,
             child: Image(
-              image: AssetImage(MyImage.),
+              image: AssetImage(MyImage.bottolImage),
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -32,14 +33,34 @@ class NotificationPageFive extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-            Text("187 +",style: regularTextStyle24.copyWith(fontSize: 80,color: MyColor.whiteColor),),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: MyColor.grayColor.withAlpha(150),
+                      ),
+                      child: SvgPicture.asset(MyImage.backIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 400,),
+            Text("+250ml",style: regularTextStyle24.copyWith(fontSize: 80,color: MyColor.whiteColor),),
               Text(
-                "Fitness Chatbot Message",
+                "Water Intake",
                 style: regularTextStyle24.copyWith(color: MyColor.whiteColor,fontSize: 30),
               ),
               const SizedBox(height: 10,),
               Text(
-                "You have new message from couch Sandow Please chek it now ",textAlign: TextAlign.center,
+                "You still need 1,750ml of water for today Don't forgate Drink ",textAlign: TextAlign.center,
                 style: regularTextStyle18.copyWith(color: MyColor.whiteColor,),
               ),
               const SizedBox(height: 30,),
@@ -49,25 +70,25 @@ class NotificationPageFive extends StatelessWidget {
                   height: 54,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteHelper.notificationPageThree);
+                      Navigator.pushNamed(context, RouteHelper.notificationPageSIx);
                     },
                     style: ButtonStyle(
                         backgroundColor:
-                        WidgetStateProperty.all(MyColor.whiteColor),
+                        WidgetStateProperty.all(MyColor.splashBacColorTwo),
                         shape: WidgetStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(19)))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "See Fitness Couch",
+                          "See Hydration",
                           style: regularTextStyle24.copyWith(
-                              color: MyColor.blackColor, fontSize: 18),
+                              color: MyColor.whiteColor, fontSize: 18),
                         ),
                         const SizedBox(
                           width: 10,
                         ),
-                       Image(image: AssetImage(MyImage.messageIcon),color: MyColor.blackColor,height: 20,)
+                    SvgPicture.asset(MyImage.fireIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 25,)
                       ],
                     ),
                   ),

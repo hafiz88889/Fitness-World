@@ -3,11 +3,11 @@ import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
-class NotificationPageTwo extends StatelessWidget {
-  const NotificationPageTwo({super.key});
+class NotificationPageSeven extends StatelessWidget {
+  const NotificationPageSeven({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class NotificationPageTwo extends StatelessWidget {
             },
             blendMode: BlendMode.darken,
             child: Image(
-              image: AssetImage(MyImage.robotImageTwo),
+              image: AssetImage(MyImage.dambellImageTwo),
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -53,14 +53,14 @@ class NotificationPageTwo extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 400,),
-              Text("187 +",textAlign: TextAlign.center,style: regularTextStyle24.copyWith(fontSize: 80,color: MyColor.whiteColor),),
+            Text("-512kcal",style: regularTextStyle24.copyWith(fontSize: 80,color: MyColor.whiteColor),),
               Text(
-                "Fitness Chatbot Message",textAlign: TextAlign.center,
+                "Workout Complete",
                 style: regularTextStyle24.copyWith(color: MyColor.whiteColor,fontSize: 30),
               ),
               const SizedBox(height: 10,),
               Text(
-                "You have new message from couch Sandow Please chek it now ",textAlign: TextAlign.center,
+                "You complete the Cest Workout training and burn 205kcal total ",textAlign: TextAlign.center,
                 style: regularTextStyle18.copyWith(color: MyColor.whiteColor,),
               ),
               const SizedBox(height: 30,),
@@ -70,25 +70,25 @@ class NotificationPageTwo extends StatelessWidget {
                   height: 54,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteHelper.notificationPageThree);
+                      Navigator.pushNamed(context, RouteHelper.notificationPageEight);
                     },
                     style: ButtonStyle(
                         backgroundColor:
-                        WidgetStateProperty.all(MyColor.whiteColor),
+                        WidgetStateProperty.all(MyColor.redColor),
                         shape: WidgetStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(19)))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "See Fitness Couch",
+                          "See Workout",
                           style: regularTextStyle24.copyWith(
-                              color: MyColor.blackColor, fontSize: 18),
+                              color: MyColor.whiteColor, fontSize: 18),
                         ),
                         const SizedBox(
                           width: 10,
                         ),
-                       Image(image: AssetImage(MyImage.messageIcon),color: MyColor.blackColor,height: 20,)
+                     SvgPicture.asset(MyImage.weightLiftIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),height: 20,)
                       ],
                     ),
                   ),

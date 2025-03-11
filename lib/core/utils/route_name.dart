@@ -71,9 +71,12 @@ import 'package:fitnessworld/features/home_screen/presentation/screen/home_scree
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_three.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_twelve.dart';
 import 'package:fitnessworld/features/home_screen/presentation/screen/home_screen_two.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_eight.dart';
 import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_five.dart';
 import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_four.dart';
 import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_one.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_seven.dart';
+import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_six.dart';
 import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_theee.dart';
 import 'package:fitnessworld/features/notification_screen/presentation/screen/notification_page_two.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_eight.dart';
@@ -91,15 +94,18 @@ import 'package:fitnessworld/features/personalize_coching_screen/presentation/sc
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_three.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_twelve.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_two.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_eight.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_five.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_four.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_nine.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_one.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_seven.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_six.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_three.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/screen/profile_screen_two.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_notification_setting.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_security_setting.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_setting_page_one.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_personal_info.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_account_setting.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_eight.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_five.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_four.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_nine.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_one.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_seven.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_six.dart';
 import 'package:fitnessworld/features/search_screen/presentation/screen/search_page_one.dart';
 import 'package:fitnessworld/features/search_screen/presentation/screen/search_page_three.dart';
 import 'package:fitnessworld/features/search_screen/presentation/screen/search_page_two.dart';
@@ -148,6 +154,8 @@ import 'package:fitnessworld/features/workout_training_screen/presentation/scree
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_twelve.dart';
 import 'package:fitnessworld/features/workout_training_screen/presentation/screen/workout_traning_page_two.dart';
 import 'package:flutter/material.dart';
+import '../../features/profile_setup_and_account_completion/presentation/screen/profile_screen_three.dart';
+import '../../features/profile_setup_and_account_completion/presentation/screen/profile_screen_two.dart';
 import '../../features/sing_in_sign_up_screen/presentation/screen/password_sent_screen.dart';
 
 class RouteHelper{
@@ -304,6 +312,14 @@ class RouteHelper{
   static String notificationPageThree="/NotificationPageThree";
   static String notificationPageFour="/NotificationPageFour";
   static String notificationPageFive="/NotificationPageFive";
+  static String notificationPageSIx="/NotificationPageSIx";
+  static String notificationPageSeven="/NotificationPageSeven";
+  static String notificationPageEight="/NotificationPageEight";
+  static String profileSettingPageOne="/ProfileSettingPageOne";
+  static String profileSettingPageTwo="/ProfileSettingPageTwo";
+  static String profileSettingPageThree="/ProfileSettingPageThree";
+  static String profileSettingPageFour="/ProfileSettingPageFour";
+  static String profileSecuritySetting="/ProfileSecuritySetting";
 
 
 
@@ -463,6 +479,14 @@ return{
   RouteHelper.notificationPageThree:(context)=> const NotificationPageThree(),
   RouteHelper.notificationPageFour:(context)=> const NotificationPageFour(),
   RouteHelper.notificationPageFive:(context)=> const NotificationPageFive(),
+  RouteHelper.notificationPageSIx:(context)=> const NotificationPageSIx(),
+  RouteHelper.notificationPageSeven:(context)=> const NotificationPageSeven(),
+  RouteHelper.notificationPageEight:(context)=> const NotificationPageEight(),
+  RouteHelper.profileSettingPageOne:(context)=> const ProfileSettingPageOne(),
+  RouteHelper.profileSettingPageTwo:(context)=> const ProfileSettingPageTwo(),
+  RouteHelper.profileSettingPageThree:(context)=> const ProfileSettingPageThree(),
+  RouteHelper.profileSettingPageFour:(context)=> const ProfileSettingPageFour(),
+  RouteHelper.profileSecuritySetting:(context)=> const ProfileSecuritySetting(),
 
 
 };

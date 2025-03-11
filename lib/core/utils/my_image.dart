@@ -167,6 +167,10 @@ class MyImage{
    static String featureLocked="assets/images/featurelocked.JPG";
    static String twoManOneWoman="assets/images/twomanonewoman.jpg";
    static String downloadIcon="assets/icons/downloadIcon.png";
+   static String bottolImage="assets/images/bottolImage.jpg";
+   static String dambellImageTwo="assets/images/dambelImagetwo.jpg";
+   static String graphImage="assets/images/graphImage.JPG";
+   static String securityImage="assets/images/securityImage.JPG";
 
 
 }

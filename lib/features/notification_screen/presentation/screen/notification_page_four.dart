@@ -3,6 +3,7 @@ import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 
 class NotificationPageFour extends StatelessWidget {
@@ -32,6 +33,26 @@ class NotificationPageFour extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: MyColor.grayColor.withAlpha(150),
+                      ),
+                      child: SvgPicture.asset(MyImage.backIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 400,),
             Text("+1,121",style: regularTextStyle24.copyWith(fontSize: 80,color: MyColor.whiteColor),),
               Text(
                 "Step Taken",

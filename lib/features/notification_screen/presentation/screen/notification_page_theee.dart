@@ -33,6 +33,26 @@ class NotificationPageThree extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: MyColor.grayColor.withAlpha(150),
+                      ),
+                      child: SvgPicture.asset(MyImage.backIcon,colorFilter: ColorFilter.mode(MyColor.whiteColor, BlendMode.srcIn),),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 400,),
             Text("+8.5",style: regularTextStyle24.copyWith(fontSize: 80,color: MyColor.whiteColor),),
               Text(
                 "Sandow Score Increase",

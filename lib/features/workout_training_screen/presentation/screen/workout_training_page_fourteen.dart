@@ -23,8 +23,8 @@ class WorkoutTrainingPageFourteen extends StatelessWidget {
           ),
           Positioned(
               top: 100,
-              left: 50,
-              child: Image(image: AssetImage(MyImage.scannerIcon),color: MyColor.whiteColor.withAlpha(150),),height: 700,width: 300,),
+              left: 50,height: 700,width: 300,
+              child: Image(image: AssetImage(MyImage.scannerIcon),color: MyColor.whiteColor.withAlpha(150),),),
           Positioned(
             top: 50,
             left: 20,

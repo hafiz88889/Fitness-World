@@ -3,7 +3,7 @@ import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_image.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
-import 'package:fitnessworld/features/profile_setting_help_center_screen/presentation/widget/switch_widget.dart';
+import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/widget/switch_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

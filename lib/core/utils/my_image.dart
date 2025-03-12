@@ -171,6 +171,8 @@ class MyImage{
    static String dambellImageTwo="assets/images/dambelImagetwo.jpg";
    static String graphImage="assets/images/graphImage.JPG";
    static String securityImage="assets/images/securityImage.JPG";
+   static String linkImage="assets/icons/link.png";
+   static String languageFlag="assets/icons/languageFlag.png";
 
 
 }

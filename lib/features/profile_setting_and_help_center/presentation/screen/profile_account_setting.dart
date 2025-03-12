@@ -113,14 +113,19 @@ class _ProfileSettingPageTwoState extends State<ProfileSettingPageTwo> {
                     title: "Couch Contact",
                     title2: const Text("+15"),
                   ),
-                  GeneralWidget(
-                    image: MyImage.notifictionIcon,
-                    title: "Language",
-                    title2: const Text("English (EN)"),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteHelper.profileLanguage);
+                    },
+                    child: GeneralWidget(
+                      image: MyImage.notifictionIcon,
+                      title: "Language",
+                      title2: const Text("English (EN)"),
+                    ),
                   ),
                   GeneralWidget(
                     image: MyImage.notifictionIcon,
-                    title: "Language",
+                    title: "Dark Mode",
                     title2: Switch(
                       value: isSelect,
                       onChanged: (value) {
@@ -131,11 +136,16 @@ class _ProfileSettingPageTwoState extends State<ProfileSettingPageTwo> {
                       activeColor: MyColor.splashBacColor,
                     ),
                   ),
-                  GeneralWidget(
-                    image: MyImage.notifictionIcon,
-                    title: "Linked Device",
-                    title2: const Text(
-                      "Apple Watch",
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteHelper.profileLinkDevice);
+                    },
+                    child: GeneralWidget(
+                      image: MyImage.notifictionIcon,
+                      title: "Linked Device",
+                      title2: const Text(
+                        "Apple Watch",
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -194,10 +204,15 @@ class _ProfileSettingPageTwoState extends State<ProfileSettingPageTwo> {
                       activeColor: MyColor.splashBacColor,
                     ),
                   ),
-                  GeneralWidget(
-                    image: MyImage.notifictionIcon,
-                    title: "Privacy Policy",
-                    title2: const Text("3+"),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteHelper.profileRefferProgram);
+                  },
+                    child: GeneralWidget(
+                      image: MyImage.notifictionIcon,
+                      title: "Privacy Policy",
+                      title2: const Text("3+"),
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -215,13 +230,23 @@ class _ProfileSettingPageTwoState extends State<ProfileSettingPageTwo> {
                   const SizedBox(
                     height: 15,
                   ),
-                  GeneralWidget(
-                    image: MyImage.notifictionIcon,
-                    title: "About Us",
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteHelper.profileAboutUs);
+                    },
+                    child: GeneralWidget(
+                      image: MyImage.notifictionIcon,
+                      title: "About Us",
+                    ),
                   ),
-                  GeneralWidget(
-                    image: MyImage.notifictionIcon,
-                    title: "Help Center",
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteHelper.profileHelpCenter);
+                    },
+                    child: GeneralWidget(
+                      image: MyImage.notifictionIcon,
+                      title: "Help Center",
+                    ),
                   ),
                   GeneralWidget(
                     image: MyImage.notifictionIcon,

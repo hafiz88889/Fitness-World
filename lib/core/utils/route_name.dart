@@ -94,11 +94,16 @@ import 'package:fitnessworld/features/personalize_coching_screen/presentation/sc
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_three.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_twelve.dart';
 import 'package:fitnessworld/features/personalize_coching_screen/presentation/screen/personalize_page_two.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_about_us.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_language.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_link_device.dart';
 import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_notification_setting.dart';
 import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_security_setting.dart';
 import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_setting_page_one.dart';
 import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_personal_info.dart';
 import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_account_setting.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_help_center.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/screen/profile_reffer_program.dart';
 import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_eight.dart';
 import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_five.dart';
 import 'package:fitnessworld/features/profile_setup_and_account_completion/presentation/screen/profile_screen_four.dart';
@@ -320,6 +325,11 @@ class RouteHelper{
   static String profileSettingPageThree="/ProfileSettingPageThree";
   static String profileSettingPageFour="/ProfileSettingPageFour";
   static String profileSecuritySetting="/ProfileSecuritySetting";
+  static String profileLinkDevice="/ProfileLinkDevice";
+  static String profileLanguage="/ProfileLanguage";
+  static String profileAboutUs="/ProfileAboutUs";
+  static String profileHelpCenter="/ProfileHelpCenter";
+  static String profileRefferProgram="/ProfileRefferProgram";
 
 
 
@@ -487,6 +497,11 @@ return{
   RouteHelper.profileSettingPageThree:(context)=> const ProfileSettingPageThree(),
   RouteHelper.profileSettingPageFour:(context)=> const ProfileSettingPageFour(),
   RouteHelper.profileSecuritySetting:(context)=> const ProfileSecuritySetting(),
+  RouteHelper.profileLinkDevice:(context)=> const ProfileLinkDevice(),
+  RouteHelper.profileLanguage:(context)=> const ProfileLanguage(),
+  RouteHelper.profileAboutUs:(context)=> const ProfileAboutUs(),
+  RouteHelper.profileHelpCenter:(context)=> const ProfileHelpCenter(),
+  RouteHelper.profileRefferProgram:(context)=> const ProfileRefferProgram(),
 
 
 };

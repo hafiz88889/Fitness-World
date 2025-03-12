@@ -154,7 +154,9 @@ class SignUpPage extends StatelessWidget {
                                 decoration: TextDecoration.underline,
                                 decorationColor: MyColor.splashBacColor
                             ))
-                      ])),
+                      ],
+                  ),
+              ),
             ),
           ],
         ),

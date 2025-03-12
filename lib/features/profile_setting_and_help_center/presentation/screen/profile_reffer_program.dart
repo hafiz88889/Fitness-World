@@ -51,7 +51,7 @@ class ProfileRefferProgram extends StatelessWidget {
                   height: 200,
                   width: 170,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(35),bottomLeft: Radius.circular(35),topRight: Radius.circular(35),bottomRight: Radius.circular(35)),
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(35),bottomLeft: Radius.circular(35),topRight: Radius.circular(35),bottomRight: Radius.circular(35)),
                     color: MyColor.splashBacColor
                   ),
                   child: Column(
@@ -68,7 +68,7 @@ class ProfileRefferProgram extends StatelessWidget {
             height: 200,
             width: 170,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(35),topRight: Radius.circular(35),topLeft: Radius.circular(35),bottomLeft: Radius.circular(35)),
+                borderRadius: const BorderRadius.only(bottomRight: Radius.circular(35),topRight: Radius.circular(35),topLeft: Radius.circular(35),bottomLeft: Radius.circular(35)),
                 color: MyColor.splashBacColor
             ),
             child: Column(
@@ -87,7 +87,7 @@ class ProfileRefferProgram extends StatelessWidget {
             Expanded (child: Text("Invite your Friend and in crease your \nincrease you fitness ",textAlign: TextAlign.center,style: regularTextStyle24.copyWith(color: MyColor.grayColor.withAlpha(150),fontSize: 16),)),
 
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: MyColor.blackColor,width: 1.5)

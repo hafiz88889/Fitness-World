@@ -2,6 +2,7 @@ import 'package:fitnessworld/core/utils/my_color.dart';
 import 'package:fitnessworld/core/utils/my_text_style.dart';
 import 'package:fitnessworld/core/utils/route_name.dart';
 import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/widget/general_widget.dart';
+import 'package:fitnessworld/features/profile_setting_and_help_center/presentation/widget/submit_feedback_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -248,9 +249,22 @@ class _ProfileSettingPageTwoState extends State<ProfileSettingPageTwo> {
                       title: "Help Center",
                     ),
                   ),
-                  GeneralWidget(
-                    image: MyImage.notifictionIcon,
-                    title: "Submit feedback",
+                  GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(
+                        barrierColor: MyColor.grayColor,
+                        isScrollControlled: true,
+                        context: context, builder: (context) {
+                        return FractionallySizedBox(
+                          heightFactor: 0.65,
+                          child: SubmitFeedbackWidget(),
+                        );
+                      },);
+                    },
+                    child: GeneralWidget(
+                      image: MyImage.notifictionIcon,
+                      title: "Submit feedback",
+                    ),
                   ),
                   const SizedBox(
                     height: 15,
